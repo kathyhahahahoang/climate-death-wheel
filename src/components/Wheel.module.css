@@ -1,0 +1,25 @@
+.container {
+  background-color: azure;
+
+  height: 100vh;
+  margin: auto;
+}
+
+.question {
+  height: 40rem;
+  background-color: aquamarine;
+
+  top: 3rem;
+  left: 2rem;
+}
+
+.wheel {
+  z-index: 3;
+  cursor: pointer;
+  background-color: blanchedalmond;
+  height: 44rem;
+}
+
+p {
+  font-size: 5rem;
+}
