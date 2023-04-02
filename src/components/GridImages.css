@@ -1,0 +1,50 @@
+.container {
+  /* background-color: azure; */
+  margin: 0 3rem;
+  display: flex;
+}
+
+.left-container {
+  /* background-color: aquamarine; */
+  width: 40%;
+  padding: 1.4rem;
+}
+
+.right-container {
+  /* background-color: aqua; */
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  padding: 1.4rem;
+}
+
+.header {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.2rem;
+}
+
+.pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 2px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.pic:hover {
+  transform: scale(110%);
+}
+
+.largePic {
+  min-height: 100%;
+  overflow: hidden;
+}
