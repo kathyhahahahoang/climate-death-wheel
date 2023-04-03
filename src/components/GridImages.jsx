@@ -33,6 +33,12 @@ const Options = () => {
     setDescription(text);
   };
 
+  const largePicChangeHandler = () => {
+    setImageId();
+    setShowTiles(true);
+    setShowLarge(false);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles["left-container"]}>
@@ -43,10 +49,11 @@ const Options = () => {
         {showLarge && (
           <img
             className={styles.largePic}
-            onClick={changeHandler}
+            onClick={largePicChangeHandler}
             src={imageId}
           ></img>
         )}
+        {/* {showLarge && <div className={styles.close}>x</div>} */}
 
         {showTiles && (
           <div className={styles["pic-container"]}>

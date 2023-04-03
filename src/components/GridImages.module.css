@@ -5,13 +5,13 @@
 }
 
 .left-container {
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   width: 40%;
   padding: 1.4rem;
 }
 
 .right-container {
-  background-color: aqua;
+  /* background-color: aqua; */
   width: 60%;
   height: 100%;
   display: grid;
