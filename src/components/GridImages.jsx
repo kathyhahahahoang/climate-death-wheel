@@ -1,4 +1,4 @@
-import styles from "./Options.module.css";
+import styles from "./GridImages.module.css";
 import poverty from "../img/poverty.jpg";
 import capitalism from "../img/capitalism.jpg";
 import disease from "../img/disease.jpg";
@@ -35,7 +35,7 @@ const Options = () => {
           <img
             className={styles.largePic}
             onClick={changeHandler}
-            src={superstorm}
+            src={poorAirQuality}
           ></img>
         )}
         {showTiles && (

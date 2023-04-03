@@ -46,28 +46,30 @@ const Wheel = () => {
   };
 
   return (
-    <div className={styles.container}>
-      {showModal && (
-        <Modal
-          onModalHandler={modalHandler}
-          title={wheelOptions[winningNumber - 1].title}
-          text={wheelOptions[winningNumber - 1].text}
-          image={wheelOptions[winningNumber - 1].image}
-        />
-      )}
+    <div className={styles.background}>
+      <div className={styles.container}>
+        {showModal && (
+          <Modal
+            onModalHandler={modalHandler}
+            title={wheelOptions[winningNumber - 1].title}
+            text={wheelOptions[winningNumber - 1].text}
+            image={wheelOptions[winningNumber - 1].image}
+          />
+        )}
 
-      <img
-        className={styles.question}
-        srcSet={` ${questionSmall} 768w, ${question} 1280w`}
-        alt="What will be your cause of death text"
-      ></img>
-      <img
-        className={styles.wheel}
-        src={wheel}
-        alt="roulette wheel"
-        onClick={spinHandler}
-        style={spinWheel}
-      ></img>
+        <img
+          className={styles.question}
+          srcSet={` ${questionSmall} 768w, ${question} 1280w`}
+          alt="What will be your cause of death text"
+        ></img>
+        <img
+          className={styles.wheel}
+          src={wheel}
+          alt="roulette wheel"
+          onClick={spinHandler}
+          style={spinWheel}
+        ></img>
+      </div>
     </div>
   );
 };
