@@ -12,7 +12,7 @@ import WheelOptions from "../constants/WheelOptions";
 import { useState } from "react";
 import { type } from "@testing-library/user-event/dist/type";
 
-const Options = () => {
+const Options = (props) => {
   const [showTiles, setShowTiles] = useState(true);
   const [showLarge, setShowLarge] = useState(false);
   const [imageId, setImageId] = useState();
