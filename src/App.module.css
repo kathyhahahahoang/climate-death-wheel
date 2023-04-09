@@ -11,4 +11,13 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  font-family: "kathyhandwritingregular";
+}
+
+@font-face {
+  font-family: "kathyhandwritingregular";
+  src: url("./fonts/kathyhandwriting-regular-webfont.woff2") format("woff2"),
+    url("./fonts/kathyhandwriting-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }

@@ -1,6 +1,6 @@
 .container {
   /* background-color: azure; */
-  margin: 0 3rem;
+  margin: 0 5rem 5rem;
   display: flex;
 }
 
@@ -8,6 +8,7 @@
   /* background-color: aquamarine; */
   width: 40%;
   padding: 1.4rem;
+  text-transform: uppercase;
 }
 
 .right-container {
@@ -64,5 +65,15 @@
   grid-row: 1/-1;
   width: 100%;
   height: 100%;
+  grid-auto-rows: max-content;
   object-fit: cover;
 }
+
+/* .close {
+  font-size: 6rem;
+  position: absolute;
+  z-index: 6;
+  right: 5rem;
+  bottom: -24rem;
+  color: white;
+} */

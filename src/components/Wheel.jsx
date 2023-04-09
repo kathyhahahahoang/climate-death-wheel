@@ -8,40 +8,41 @@ import { useState, useContext, useEffect } from "react";
 import InfoContext from "../store/info-context";
 
 const Wheel = () => {
-  const { title, setTitle, text, setText, image, setImage } =
+  const { title, setTitle, text, setText, image, setImage, icon, setIcon } =
     useContext(InfoContext);
 
   const [spin, setSpin] = useState(false);
-  const [deg, setDeg] = useState(0);
   const [buttonDisable, setButtonDisable] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [deg, setDeg] = useState(0);
   const [winner, setWinner] = useState({});
-  const { title: header, text: description, image: pic } = winner;
 
   useEffect(() => {
     setDeg(Math.floor(5000 + Math.random() * 10000));
   }, []);
 
-  const spinHandler = () => {
-    setSpin(true);
-    setButtonDisable(true);
+  useEffect(() => {
     const zoneSize = 7.5;
     const actualDeg = deg % 360;
     const winningNumber = Math.ceil(actualDeg / zoneSize);
     setWinner(wheelOptions[winningNumber - 1]);
-    openModal();
-  };
-
-  console.log("1:" + " " + deg, winner.title);
-  console.log("2:" + " " + header, text, image);
+  }, [deg]);
 
   useEffect(() => {
     if (winner) {
+      const { title: header, text: description, image: pic, icon } = winner;
       setTitle(header);
       setText(description);
       setImage(pic);
+      setIcon(icon);
     }
   }, [winner]);
+
+  const spinHandler = () => {
+    setSpin(true);
+    setButtonDisable(true);
+    openModal();
+  };
 
   const openModal = () => {
     const timer = setTimeout(() => {
@@ -60,6 +61,8 @@ const Wheel = () => {
     pointerEvents: buttonDisable ? "none" : "auto",
   };
 
+  console.log(title, text, image, icon);
+
   return (
     <div className={styles.background}>
       <div className={styles.container}>
@@ -68,7 +71,7 @@ const Wheel = () => {
             onModalHandler={modalHandler}
             title={title}
             text={text}
-            image={pic}
+            image={image}
           />
         )}
 

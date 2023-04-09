@@ -9,17 +9,23 @@ import poorAirQuality from "../img/poor-air-quality.jpg";
 import risingSeaLevels from "../img/rising-sea-levels.jpg";
 import superstorm from "../img/superstorm.jpg";
 import WheelOptions from "../constants/WheelOptions";
-import { useState } from "react";
-import { type } from "@testing-library/user-event/dist/type";
+import InfoContext from "../store/info-context";
+import { useState, useContext, useEffect } from "react";
 
 const Options = (props) => {
-  const [showTiles, setShowTiles] = useState(true);
-  const [showLarge, setShowLarge] = useState(false);
+  const { title, text, image } = useContext(InfoContext);
+
+  const [showTiles, setShowTiles] = useState(false);
+  const [showLarge, setShowLarge] = useState(true);
   const [imageId, setImageId] = useState();
-  const [title, setTitle] = useState("Capitalism");
-  const [description, setDescription] = useState(
-    "The world’s richest people emit huge and unsustainable amounts of carbon and, unlike ordinary people, 50% to 70% of their emissions result from their investments. 125 of the world’s richest billionaires show that on average they emit 3 million tonnes a year, more than a million times the average for someone in the bottom 90% of humanity. Billionaires hold extensive stakes in many of the world’s largest and most powerful corporations, which gives them the power to influence the way these companies act. The role of the super-rich in super-charging climate change is rarely discussed. These billionaire investors at the top of the corporate pyramid have huge responsibility for driving climate breakdown."
-  );
+  const [header, setHeader] = useState("");
+  const [description, setDescription] = useState("");
+
+  useEffect(() => {
+    setImageId(image);
+    setHeader(title);
+    setDescription(text);
+  }, [image, title, text]);
 
   const changeHandler = (event) => {
     setShowLarge(!showLarge);
@@ -29,7 +35,7 @@ const Options = (props) => {
     const header = WheelOptions.wheelOptions[id].title;
     const text = WheelOptions.wheelOptions[id].text;
     setImageId(image);
-    setTitle(header);
+    setHeader(header);
     setDescription(text);
   };
 
@@ -42,10 +48,15 @@ const Options = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles["left-container"]}>
-        <div className={styles.header}>{title}</div>
+        <div className={styles.header}>{header}</div>
         <div className={styles.description}>{description}</div>
       </div>
       <div className={styles["right-container"]}>
+        {/* {showLarge && (
+          <div className={styles.close} onClick={largePicChangeHandler}>
+            x
+          </div>
+        )} */}
         {showLarge && (
           <img
             className={styles.largePic}
@@ -53,7 +64,6 @@ const Options = (props) => {
             src={imageId}
           ></img>
         )}
-        {/* {showLarge && <div className={styles.close}>x</div>} */}
 
         {showTiles && (
           <div className={styles["pic-container"]}>

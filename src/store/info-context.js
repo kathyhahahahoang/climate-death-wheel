@@ -7,6 +7,8 @@ const InfoContext = React.createContext({
   setText: () => {},
   image: "",
   setImage: () => {},
+  icon: "",
+  setIcon: () => {},
 });
 
 export default InfoContext;
