@@ -1,7 +1,9 @@
 .quote {
-  font-size: 3rem;
-  margin: 5rem;
+  font-size: 6rem;
+  max-width: 1400px;
+  margin: 7rem auto;
   text-align: center;
   font-family: "kathyhandwritingregular";
   text-transform: uppercase;
+  padding: 4rem;
 }

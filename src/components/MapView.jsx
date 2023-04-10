@@ -1,12 +1,13 @@
 import { useState, useEffect, useContext } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
 
 import InfoContext from "../store/info-context";
 
 const MapView = () => {
   const [deaths, setDeaths] = useState([]);
 
-  const { title, icon } = useContext(InfoContext);
+  const { title } = useContext(InfoContext);
 
   useEffect(() => {
     const fetchDeaths = async () => {
@@ -31,15 +32,27 @@ const MapView = () => {
 
     fetchDeaths();
   }, []);
-  console.log(deaths);
-
-  const submitHandler = (event) => {
-    event.preventdefault();
-  };
 
   return (
     <div>
-      <form onSubmit={submitHandler}>
+      <MapContainer center={[0, 0]} zoom={2} scrollWheelZoom={true}>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        />
+
+        {deaths.map((person) => {
+          return (
+            <Marker position={[person.lat, person.long]}>
+              <Popup>
+                <p>Name: {person.name}</p>
+                <p>Death by: {person.cause}</p>
+              </Popup>
+            </Marker>
+          );
+        })}
+      </MapContainer>
+      <form>
         <label>
           Name:
           <input type="text" name="name" placeholder="Kathy" />
@@ -54,22 +67,6 @@ const MapView = () => {
         </label>
         <button>Submit</button>
       </form>
-      <MapContainer center={[0, 0]} zoom={2} scrollWheelZoom={true}>
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        />
-
-        {deaths.map((person) => {
-          return (
-            <Marker position={[person.lat, person.long]}>
-              <Popup>
-                <p>Name: {person.name}</p>
-              </Popup>
-            </Marker>
-          );
-        })}
-      </MapContainer>
     </div>
   );
 };

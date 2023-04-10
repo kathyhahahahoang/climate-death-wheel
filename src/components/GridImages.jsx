@@ -47,16 +47,14 @@ const Options = (props) => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.close} onClick={largePicChangeHandler}>
+        x
+      </div>
       <div className={styles["left-container"]}>
         <div className={styles.header}>{header}</div>
         <div className={styles.description}>{description}</div>
       </div>
       <div className={styles["right-container"]}>
-        {/* {showLarge && (
-          <div className={styles.close} onClick={largePicChangeHandler}>
-            x
-          </div>
-        )} */}
         {showLarge && (
           <img
             className={styles.largePic}
@@ -64,7 +62,6 @@ const Options = (props) => {
             src={imageId}
           ></img>
         )}
-
         {showTiles && (
           <div className={styles["pic-container"]}>
             <img

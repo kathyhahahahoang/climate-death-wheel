@@ -9,7 +9,7 @@
 }
 
 .container {
-  background-image: url("../img/paper.jpg");
+  background-image: url("../img/modal.jpg");
   background-size: cover;
   width: 1000px;
   height: 600px;
@@ -35,7 +35,7 @@
   height: 470px;
   padding: 1rem;
   z-index: 25;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   position: absolute;
   right: 0;
   top: 50%;
@@ -44,15 +44,15 @@
 
 .heading {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 3rem;
   padding: 5px;
-  margin-bottom: 1rem;
 }
 
 .text {
-  font-size: 1rem;
-  background-color: beige;
+  font-size: 1.2rem;
+  /* background-color: beige; */
   padding: 5px;
+  line-height: 1.1;
 }
 
 .close {
@@ -65,8 +65,8 @@
 
 .button {
   position: absolute;
-  right: 10px;
-  bottom: 20px;
+  right: 1.2rem;
+  bottom: 0;
   font-family: inherit;
   background-color: #4caf50; /* Green */
   border: none;

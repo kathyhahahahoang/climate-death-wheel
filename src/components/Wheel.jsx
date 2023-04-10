@@ -61,8 +61,6 @@ const Wheel = () => {
     pointerEvents: buttonDisable ? "none" : "auto",
   };
 
-  console.log(title, text, image, icon);
-
   return (
     <div className={styles.background}>
       <div className={styles.container}>
