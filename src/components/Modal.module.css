@@ -11,35 +11,29 @@
 .container {
   background-image: url("../img/modal.jpg");
   background-size: cover;
-  width: 1000px;
-  height: 600px;
+  width: 950px;
+  height: 550px;
   position: fixed;
   z-index: 20;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  padding: 1rem;
 }
 
 .left-container {
   background-size: cover;
-  height: 500px;
-  width: 650px;
-  z-index: 22;
-  position: absolute;
-  top: 50px;
-  left: 25px;
+  width: 70%;
+  background-color: beige;
 }
 
 .right-container {
-  width: 290px;
-  height: 470px;
-  padding: 1rem;
   z-index: 25;
   /* background-color: antiquewhite; */
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 30%;
+  padding: 0 1rem;
+  position: relative;
 }
 
 .heading {
@@ -58,17 +52,17 @@
 .close {
   font-size: 4rem;
   position: absolute;
-  right: 10px;
-  top: -15px;
+  right: 0.8rem;
+  top: -0.8rem;
   cursor: pointer;
 }
 
 .button {
   position: absolute;
-  right: 1.2rem;
+  right: 0;
   bottom: 0;
   font-family: inherit;
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
   border: none;
   color: white;
   padding: 10px 20px;
