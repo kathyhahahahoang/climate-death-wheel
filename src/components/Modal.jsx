@@ -1,13 +1,10 @@
 import styles from "./Modal.module.css";
 import { useContext } from "react";
+
 import InfoContext from "../store/info-context";
 
 const Modal = (props) => {
   const { title, text, image } = useContext(InfoContext);
-
-  const test = () => {
-    console.log("Am I working?");
-  };
 
   return (
     <div>
@@ -23,9 +20,7 @@ const Modal = (props) => {
         <div className={styles["right-container"]}>
           <div className={styles.heading}>{title}</div>
           <div className={styles.text}>{text}</div>
-          <button className={styles.button} onClick={props.onModalHandler}>
-            Read more
-          </button>
+          <button className={styles.button}>Read more</button>
         </div>
       </div>
     </div>
