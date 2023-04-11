@@ -1,13 +1,9 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
-import InfoContext from "../store/info-context";
-
 const MapView = () => {
   const [deaths, setDeaths] = useState([]);
-
-  const { title } = useContext(InfoContext);
 
   useEffect(() => {
     const fetchDeaths = async () => {
@@ -52,21 +48,6 @@ const MapView = () => {
           );
         })}
       </MapContainer>
-      <form>
-        <label>
-          Name:
-          <input type="text" name="name" placeholder="Kathy" />
-        </label>
-        <label>
-          Location:
-          <input type="text" name="location" placeholder="Los Angeles" />
-        </label>
-        <label>
-          Cause of death:
-          <input type="text" name="death" value={title} readOnly={true} />
-        </label>
-        <button>Submit</button>
-      </form>
     </div>
   );
 };

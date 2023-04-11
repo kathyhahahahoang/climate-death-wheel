@@ -3,6 +3,7 @@ import Quote1 from "./components/Quote1";
 import GridImages from "./components/GridImages";
 import Video from "./components/Video";
 import MapView from "./components/MapView";
+import Footer from "./components/Footer";
 import styles from "./App.module.css";
 
 import "./fonts/kathyhandwriting-regular-webfont.woff2";
@@ -24,8 +25,9 @@ function App() {
         <Wheel />
         <Quote1 id="quote" />
         <GridImages />
-        {/* <Video /> */}
+        <Video />
         <MapView />
+        <Footer />
       </div>
     </InfoContext.Provider>
   );
