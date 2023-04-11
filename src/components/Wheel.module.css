@@ -23,7 +23,6 @@
 }
 
 .wheel {
-  z-index: 3;
   cursor: pointer;
   /* height: 44rem; */
   height: 52%;

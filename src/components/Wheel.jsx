@@ -8,7 +8,7 @@ import { useState, useContext, useEffect } from "react";
 import InfoContext from "../store/info-context";
 
 const Wheel = () => {
-  const { title, setTitle, text, setText, image, setImage, icon, setIcon } =
+  const { title, setTitle, text, setText, image, setImage } =
     useContext(InfoContext);
 
   const [spin, setSpin] = useState(false);
@@ -30,11 +30,10 @@ const Wheel = () => {
 
   useEffect(() => {
     if (winner) {
-      const { title: header, text: description, image: pic, icon } = winner;
+      const { title: header, text: description, image: pic } = winner;
       setTitle(header);
       setText(description);
       setImage(pic);
-      setIcon(icon);
     }
   }, [winner]);
 

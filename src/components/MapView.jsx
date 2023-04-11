@@ -43,7 +43,7 @@ const MapView = () => {
 
         {deaths.map((person) => {
           return (
-            <Marker position={[person.lat, person.long]}>
+            <Marker position={[person.lat, person.long]} key={person.id}>
               <Popup>
                 <p>Name: {person.name}</p>
                 <p>Death by: {person.cause}</p>

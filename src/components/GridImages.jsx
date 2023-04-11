@@ -60,6 +60,7 @@ const Options = (props) => {
             className={styles.largePic}
             onClick={largePicChangeHandler}
             src={imageId}
+            alt="Effects of climate change"
           ></img>
         )}
         {showTiles && (
@@ -69,6 +70,7 @@ const Options = (props) => {
               onClick={changeHandler}
               src={heatwave}
               id="23"
+              alt="Burning mountains"
             ></img>
           </div>
         )}
@@ -79,6 +81,7 @@ const Options = (props) => {
               onClick={changeHandler}
               src={poverty}
               id="0"
+              alt="Women surrounded by plastic garbage"
             ></img>
           </div>
         )}
@@ -89,6 +92,7 @@ const Options = (props) => {
               onClick={changeHandler}
               src={disease}
               id="30"
+              alt="Microscopic close-up of disease"
             ></img>
           </div>
         )}
@@ -99,6 +103,7 @@ const Options = (props) => {
               onClick={changeHandler}
               src={drought}
               id="6"
+              alt="Dried ground"
             ></img>
           </div>
         )}
@@ -109,6 +114,7 @@ const Options = (props) => {
               onClick={changeHandler}
               src={capitalism}
               id="3"
+              alt="Man holding a sign against capitalism at a protest"
             ></img>
           </div>
         )}
@@ -119,6 +125,7 @@ const Options = (props) => {
               onClick={changeHandler}
               src={permafrost}
               id="17"
+              alt="Aerial view of permafrost"
             ></img>
           </div>
         )}
@@ -129,6 +136,7 @@ const Options = (props) => {
               onClick={changeHandler}
               src={poorAirQuality}
               id="12"
+              alt="Factories spewing out smoke"
             ></img>
           </div>
         )}
@@ -139,6 +147,7 @@ const Options = (props) => {
               onClick={changeHandler}
               src={risingSeaLevels}
               id="42"
+              alt="People walking around their flooded town"
             ></img>
           </div>
         )}
@@ -149,6 +158,7 @@ const Options = (props) => {
               onClick={changeHandler}
               src={superstorm}
               id="36"
+              alt="Aftermath of a hurricane"
             ></img>
           </div>
         )}

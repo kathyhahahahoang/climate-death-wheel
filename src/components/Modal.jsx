@@ -5,6 +5,10 @@ import InfoContext from "../store/info-context";
 const Modal = (props) => {
   const { title, text, image } = useContext(InfoContext);
 
+  const test = () => {
+    console.log("Am I working?");
+  };
+
   return (
     <div>
       <div className={styles.overlay} onClick={props.onModalHandler}></div>
