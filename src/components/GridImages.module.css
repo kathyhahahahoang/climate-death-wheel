@@ -1,9 +1,10 @@
 .container {
-  background-color: azure;
+  /* background-color: azure; */
   margin: 0 auto;
   display: flex;
   max-width: 87.5rem;
   padding: 0 4rem;
+  position: relative;
 }
 
 .left-container {
@@ -14,7 +15,7 @@
 }
 
 .right-container {
-  background-color: aqua;
+  /* background-color: aqua; */
   width: 43.75rem;
   max-height: 43.75rem;
   display: grid;
@@ -54,12 +55,13 @@
 }
 
 .header {
-  font-size: 3rem;
+  font-size: 5rem;
   margin-bottom: 1rem;
 }
 
 .description {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  text-transform: none;
 }
 
 .largePic {
@@ -68,10 +70,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .close {
-  font-size: 10rem;
+  font-size: 6rem;
   z-index: 20;
-  color: green;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 6rem;
+  cursor: pointer;
+  /* background-color: rgba(0, 0, 0, 0.5); */
 }

@@ -47,9 +47,11 @@ const Options = (props) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.close} onClick={largePicChangeHandler}>
-        x
-      </div>
+      {showLarge && (
+        <div className={styles.close} onClick={largePicChangeHandler}>
+          x
+        </div>
+      )}
       <div className={styles["left-container"]}>
         <div className={styles.header}>{header}</div>
         <div className={styles.description}>{description}</div>
