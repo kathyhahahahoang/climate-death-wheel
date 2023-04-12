@@ -7,7 +7,7 @@ import { wheelOptions } from "../constants/WheelOptions";
 import { useState, useContext, useEffect } from "react";
 import InfoContext from "../store/info-context";
 
-const Wheel = () => {
+const Wheel = ({ resultRef }) => {
   const { title, setTitle, text, setText, image, setImage } =
     useContext(InfoContext);
 
@@ -54,6 +54,12 @@ const Wheel = () => {
     setShowModal(false);
   };
 
+  const readMoreHandler = (e) => {
+    e.preventDefault();
+    setShowModal(false);
+    resultRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   const spinWheel = {
     transform: spin ? `rotate(${deg}deg)` : "",
     transition: spin ? "all 10s ease-out" : "",
@@ -69,6 +75,7 @@ const Wheel = () => {
             title={title}
             text={text}
             image={image}
+            onReadMore={readMoreHandler}
           />
         )}
 

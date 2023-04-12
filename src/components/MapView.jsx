@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import * as Icons from "../constants/Icons";
 import L from "leaflet";
 
 const MapView = () => {
@@ -21,6 +22,7 @@ const MapView = () => {
           lat: responseData[key].lat,
           long: responseData[key].long,
           cause: responseData[key].cause,
+          icon: responseData[key].icon,
         });
       }
       setDeaths(loadedDeaths);
@@ -28,6 +30,8 @@ const MapView = () => {
 
     fetchDeaths();
   }, []);
+
+  console.log(Icons.capitalism, typeof Icons.capitalism);
 
   return (
     <div>
@@ -39,7 +43,11 @@ const MapView = () => {
 
         {deaths.map((person) => {
           return (
-            <Marker position={[person.lat, person.long]} key={person.id}>
+            <Marker
+              position={[person.lat, person.long]}
+              key={person.id}
+              icon={Icons.capitalism}
+            >
               <Popup>
                 <p>Name: {person.name}</p>
                 <p>Death by: {person.cause}</p>

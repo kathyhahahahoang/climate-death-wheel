@@ -5,6 +5,7 @@ import Video from "./components/Video";
 import MapView from "./components/MapView";
 import Footer from "./components/Footer";
 import styles from "./App.module.css";
+import { useRef } from "react";
 
 import "./fonts/kathyhandwriting-regular-webfont.woff2";
 
@@ -17,13 +18,15 @@ function App() {
   const [image, setImage] = useState("");
   const [icon, setIcon] = useState("");
 
+  const resultRef = useRef(null);
+
   return (
     <InfoContext.Provider
       value={{ title, setTitle, text, setText, image, setImage, icon, setIcon }}
     >
       <div className={styles.app}>
-        <Wheel />
-        <Quote1 id="quote" />
+        <Wheel resultRef={resultRef} />
+        <Quote1 ref={resultRef} />
         <GridImages />
         <Video />
         <MapView />

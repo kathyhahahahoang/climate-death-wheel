@@ -20,7 +20,9 @@ const Modal = (props) => {
         <div className={styles["right-container"]}>
           <div className={styles.heading}>{title}</div>
           <div className={styles.text}>{text}</div>
-          <button className={styles.button}>Read more</button>
+          <button className={styles.button} onClick={props.onReadMore}>
+            Read more
+          </button>
         </div>
       </div>
     </div>

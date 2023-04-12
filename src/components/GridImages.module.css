@@ -9,14 +9,13 @@
 
 .left-container {
   /* background-color: aquamarine; */
-  width: 43.75rem;
+
   padding: 1.4rem;
   text-transform: uppercase;
 }
 
 .right-container {
   /* background-color: aqua; */
-  width: 43.75rem;
   max-height: 43.75rem;
   display: grid;
   grid-template-columns: repeat(3, 200px);
