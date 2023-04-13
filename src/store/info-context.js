@@ -9,6 +9,8 @@ const InfoContext = React.createContext({
   setImage: () => {},
   icon: "",
   setIcon: () => {},
+  submitForm: false,
+  setSubmitForm: () => {},
 });
 
 export default InfoContext;

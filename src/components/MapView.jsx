@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import * as Icons from "../constants/Icons";
+import InfoContext from "../store/info-context";
+import Icons from "../constants/Icons";
 import L from "leaflet";
 
 const MapView = () => {
   const [deaths, setDeaths] = useState([]);
+
+  const { submitForm } = useContext(InfoContext);
 
   useEffect(() => {
     const fetchDeaths = async () => {
@@ -29,9 +32,7 @@ const MapView = () => {
     };
 
     fetchDeaths();
-  }, []);
-
-  console.log(Icons.capitalism, typeof Icons.capitalism);
+  }, [submitForm]);
 
   return (
     <div>
@@ -42,11 +43,14 @@ const MapView = () => {
         />
 
         {deaths.map((person) => {
+          const iconProps = Object.hasOwn(Icons, person.icon) && {
+            icon: Icons[person.icon],
+          };
           return (
             <Marker
               position={[person.lat, person.long]}
               key={person.id}
-              icon={Icons.capitalism}
+              {...iconProps}
             >
               <Popup>
                 <p>Name: {person.name}</p>

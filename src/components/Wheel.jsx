@@ -8,7 +8,7 @@ import { useState, useContext, useEffect } from "react";
 import InfoContext from "../store/info-context";
 
 const Wheel = ({ resultRef }) => {
-  const { title, setTitle, text, setText, image, setImage } =
+  const { title, setTitle, text, setText, image, setImage, icon, setIcon } =
     useContext(InfoContext);
 
   const [spin, setSpin] = useState(false);
@@ -30,12 +30,15 @@ const Wheel = ({ resultRef }) => {
 
   useEffect(() => {
     if (winner) {
-      const { title: header, text: description, image: pic } = winner;
+      const { title: header, text: description, image: pic, icon } = winner;
       setTitle(header);
       setText(description);
       setImage(pic);
+      setIcon(icon);
     }
   }, [winner]);
+
+  console.log(winner);
 
   const spinHandler = () => {
     setSpin(true);
@@ -46,7 +49,7 @@ const Wheel = ({ resultRef }) => {
   const openModal = () => {
     const timer = setTimeout(() => {
       setShowModal(true);
-    }, 11000);
+    }, 7000);
     return () => clearTimeout(timer);
   };
 
@@ -62,7 +65,7 @@ const Wheel = ({ resultRef }) => {
 
   const spinWheel = {
     transform: spin ? `rotate(${deg}deg)` : "",
-    transition: spin ? "all 10s ease-out" : "",
+    transition: spin ? "all 5s ease-out" : "",
     pointerEvents: buttonDisable ? "none" : "auto",
   };
 

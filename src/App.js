@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import styles from "./App.module.css";
 import { useRef } from "react";
 
-import "./fonts/kathyhandwriting-regular-webfont.woff2";
+import "./fonts/kathy-regular-webfont.woff2";
 
 import { useState } from "react";
 import InfoContext from "./store/info-context";
@@ -17,12 +17,24 @@ function App() {
   const [text, setText] = useState("");
   const [image, setImage] = useState("");
   const [icon, setIcon] = useState("");
+  const [submitForm, setSubmitForm] = useState(false);
 
   const resultRef = useRef(null);
 
   return (
     <InfoContext.Provider
-      value={{ title, setTitle, text, setText, image, setImage, icon, setIcon }}
+      value={{
+        title,
+        setTitle,
+        text,
+        setText,
+        image,
+        setImage,
+        icon,
+        setIcon,
+        submitForm,
+        setSubmitForm,
+      }}
     >
       <div className={styles.app}>
         <Wheel resultRef={resultRef} />
