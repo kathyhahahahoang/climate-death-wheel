@@ -71,7 +71,7 @@ const Video = () => {
         <form className={styles["form-container"]} onSubmit={submitHandler}>
           <div className={styles["label-container"]}>
             <label className={styles.label} htmlFor="name">
-              Name:
+              Name/Nickname*
             </label>
             <input
               type="text"
@@ -85,7 +85,7 @@ const Video = () => {
           </div>
           <div className={styles["label-container"]}>
             <label className={styles.label} htmlFor="location">
-              Location:
+              General Location*
             </label>
             <PlacesAutocomplete
               value={address}
@@ -116,8 +116,18 @@ const Video = () => {
                         : "suggestion-item";
                       // inline style for demonstration purpose
                       const style = suggestion.active
-                        ? { backgroundColor: "#fafafa", cursor: "pointer" }
-                        : { backgroundColor: "#ffffff", cursor: "pointer" };
+                        ? {
+                            backgroundColor: "#fafafa",
+                            cursor: "pointer",
+                            fontSize: "1.4rem",
+                            paddingLeft: ".4rem",
+                          }
+                        : {
+                            backgroundColor: "#ffffff",
+                            cursor: "pointer",
+                            fontSize: "1.4rem",
+                            paddingLeft: ".4rem",
+                          };
                       return (
                         <div
                           {...getSuggestionItemProps(suggestion, {
@@ -136,7 +146,7 @@ const Video = () => {
           </div>
           <div className={styles["label-container"]}>
             <label className={styles.label} htmlFor="death">
-              Cause of death:
+              Cause of death
             </label>
             <input
               type="text"
