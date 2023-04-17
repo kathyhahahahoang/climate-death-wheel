@@ -6,7 +6,6 @@ import InfoContext from "../store/info-context";
 
 import PlacesAutocomplete, {
   geocodeByAddress,
-  geocodeByPlaceId,
   getLatLng,
 } from "react-places-autocomplete";
 
@@ -81,6 +80,7 @@ const Video = () => {
               value={enteredName}
               onChange={nameChangeHandler}
               className={styles.input}
+              required
             />
           </div>
           <div className={styles["label-container"]}>
@@ -103,6 +103,7 @@ const Video = () => {
                     className={styles.input}
                     id="location"
                     value={address}
+                    required
                     {...getInputProps({
                       placeholder: "Search Places ...",
                     })}
@@ -144,6 +145,18 @@ const Video = () => {
               className={styles.input}
               readOnly={true}
             />
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="agree"
+              className={styles.check}
+              required
+            />
+            <label htmlFor="agree" className={styles["check-text"]}>
+              I agree to let Climate Death Wheel use my information for the
+              purposes of collecting data for the map
+            </label>
           </div>
           <button className={styles.button}>Submit</button>
           {submitMessage && (

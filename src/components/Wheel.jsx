@@ -38,8 +38,6 @@ const Wheel = ({ resultRef }) => {
     }
   }, [winner]);
 
-  console.log(winner);
-
   const spinHandler = () => {
     setSpin(true);
     setButtonDisable(true);
@@ -94,6 +92,10 @@ const Wheel = ({ resultRef }) => {
           onClick={spinHandler}
           style={spinWheel}
         ></img>
+        <p className={styles.text}>
+          Click on the <br />
+          wheel to spin!
+        </p>
       </div>
     </div>
   );
