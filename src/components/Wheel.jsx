@@ -8,8 +8,18 @@ import { useState, useContext, useEffect } from "react";
 import InfoContext from "../store/info-context";
 
 const Wheel = ({ resultRef }) => {
-  const { title, setTitle, text, setText, image, setImage, icon, setIcon } =
-    useContext(InfoContext);
+  const {
+    title,
+    setTitle,
+    text,
+    setText,
+    image,
+    setImage,
+    setIcon,
+    setOpenModal,
+    setShowTiles,
+    setShowLarge,
+  } = useContext(InfoContext);
 
   const [spin, setSpin] = useState(false);
   const [buttonDisable, setButtonDisable] = useState(false);
@@ -42,6 +52,9 @@ const Wheel = ({ resultRef }) => {
     setSpin(true);
     setButtonDisable(true);
     openModal();
+    setOpenModal(true);
+    setShowTiles(false);
+    setShowLarge(true);
   };
 
   const openModal = () => {

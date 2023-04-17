@@ -9,6 +9,12 @@ const InfoContext = React.createContext({
   setImage: () => {},
   icon: "",
   setIcon: () => {},
+  openModal: false,
+  setOpenModal: () => {},
+  showTiles: true,
+  setShowTiles: () => {},
+  showLarge: false,
+  setShowLarge: () => {},
   submitForm: false,
   setSubmitForm: () => {},
 });

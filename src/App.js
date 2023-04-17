@@ -17,6 +17,9 @@ function App() {
   const [text, setText] = useState("");
   const [image, setImage] = useState("");
   const [icon, setIcon] = useState("");
+  const [openModal, setOpenModal] = useState(false);
+  const [showTiles, setShowTiles] = useState(true);
+  const [showLarge, setShowLarge] = useState(false);
   const [submitForm, setSubmitForm] = useState(false);
 
   const resultRef = useRef(null);
@@ -32,6 +35,12 @@ function App() {
         setImage,
         icon,
         setIcon,
+        openModal,
+        setOpenModal,
+        showTiles,
+        setShowTiles,
+        showLarge,
+        setShowLarge,
         submitForm,
         setSubmitForm,
       }}

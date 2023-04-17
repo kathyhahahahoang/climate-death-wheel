@@ -13,20 +13,32 @@ import InfoContext from "../store/info-context";
 import { useState, useContext, useEffect } from "react";
 
 const Options = (props) => {
-  const { title, text, image } = useContext(InfoContext);
+  const {
+    title,
+    text,
+    image,
+    openModal,
+    setOpenModal,
+    showTiles,
+    setShowTiles,
+    showLarge,
+    setShowLarge,
+  } = useContext(InfoContext);
 
-  const [showTiles, setShowTiles] = useState(false);
-  const [showLarge, setShowLarge] = useState(true);
   const [imageId, setImageId] = useState();
   const [header, setHeader] = useState("");
   const [description, setDescription] = useState("");
-  const [readMore, setReadMore] = useState(false);
 
   useEffect(() => {
     setImageId(image);
     setHeader(title);
     setDescription(text);
   }, [image, title, text]);
+  console.log(
+    "OpenModal:" + openModal,
+    "showTiles:" + showTiles,
+    "showLarge:" + showLarge
+  );
 
   const changeHandler = (event) => {
     setShowLarge(!showLarge);
@@ -41,10 +53,9 @@ const Options = (props) => {
   };
 
   const largePicChangeHandler = () => {
-    setImageId();
-    setShowTiles(true);
-    setShowLarge(false);
-    setReadMore(true);
+    setShowTiles(!showTiles);
+    setShowLarge(!showLarge);
+    setOpenModal(false);
   };
 
   return (
@@ -54,13 +65,23 @@ const Options = (props) => {
           x
         </div>
       )}
+
       {showLarge && (
         <div className={styles["left-container"]}>
-          <div className={styles.header}>{header}</div>
-          <div className={styles.description}>{description}</div>
+          {openModal ? (
+            <div className={styles.header}>{title}</div>
+          ) : (
+            <div className={styles.header}>{header}</div>
+          )}
+          {openModal ? (
+            <div className={styles.description}>{text}</div>
+          ) : (
+            <div className={styles.description}>{description}</div>
+          )}
         </div>
       )}
-      {readMore && showTiles && (
+
+      {showTiles && (
         <div className={styles["left-container"]}>
           <div className={styles.header}>Wanna learn more?</div>
           <div className={styles.description}>
@@ -85,18 +106,28 @@ const Options = (props) => {
             <br />
             <br />
             Click on the images to the right to find out more about how climate
-            change is affecting us now.
+            change is affecting us now &rarr;
           </div>
         </div>
       )}
+
       <div className={styles["right-container"]}>
         {showLarge && (
-          <img
-            className={styles.largePic}
-            onClick={largePicChangeHandler}
-            src={imageId}
-            alt="Effects of climate change"
-          ></img>
+          <div className={styles.largePic}>
+            {openModal ? (
+              <img
+                onClick={largePicChangeHandler}
+                src={image}
+                alt="Effects of climate change"
+              ></img>
+            ) : (
+              <img
+                onClick={largePicChangeHandler}
+                src={imageId}
+                alt="Effects of climate change"
+              ></img>
+            )}
+          </div>
         )}
 
         {showTiles && (
