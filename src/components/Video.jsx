@@ -170,7 +170,9 @@ const Video = () => {
           </div>
           <button className={styles.button}>Submit</button>
           {submitMessage && (
-            <p className={styles.message}>Thanks for adding to the map!</p>
+            <p className={styles.message}>
+              Thanks for contributing to the map!
+            </p>
           )}
         </form>
       </div>
