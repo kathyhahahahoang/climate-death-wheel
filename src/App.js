@@ -15,6 +15,7 @@ import InfoContext from "./store/info-context";
 function App() {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
+  const [longText, setLongText] = useState("");
   const [image, setImage] = useState("");
   const [icon, setIcon] = useState("");
   const [openModal, setOpenModal] = useState(false);
@@ -31,6 +32,8 @@ function App() {
         setTitle,
         text,
         setText,
+        longText,
+        setLongText,
         image,
         setImage,
         icon,

@@ -13,6 +13,8 @@ const Wheel = ({ resultRef }) => {
     setTitle,
     text,
     setText,
+    longText,
+    setLongText,
     image,
     setImage,
     setIcon,
@@ -40,9 +42,16 @@ const Wheel = ({ resultRef }) => {
 
   useEffect(() => {
     if (winner) {
-      const { title: header, text: description, image: pic, icon } = winner;
+      const {
+        title: header,
+        text: description,
+        longText: longDescription,
+        image: pic,
+        icon,
+      } = winner;
       setTitle(header);
       setText(description);
+      setLongText(longDescription);
       setImage(pic);
       setIcon(icon);
     }

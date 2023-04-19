@@ -14,6 +14,7 @@ code {
 
 .leaflet-container {
   margin: 5rem auto;
-  width: 82rem;
+  max-width: 82rem;
+  margin: 0 4rem;
   height: 75vh;
 }

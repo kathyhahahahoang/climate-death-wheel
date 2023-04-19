@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import InfoContext from "../store/info-context";
 import Icons from "../constants/Icons";
-import L from "leaflet";
 
 const MapView = () => {
   const [deaths, setDeaths] = useState([]);

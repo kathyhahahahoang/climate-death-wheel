@@ -1,7 +1,13 @@
 import styles from "./Footer.module.css";
 
 const Footer = () => {
-  return <p className={styles.footer}> &copy; Kathy Hoang 2023</p>;
+  const year = new Date().getFullYear();
+  return (
+    <div className={styles.footer}>
+      <span className={styles.copyright}>&copy;</span>
+      <p>Kathy Hoang {year}</p>
+    </div>
+  );
 };
 
 export default Footer;

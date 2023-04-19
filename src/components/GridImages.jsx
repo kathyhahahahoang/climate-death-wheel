@@ -15,7 +15,7 @@ import { useState, useContext, useEffect } from "react";
 const Options = (props) => {
   const {
     title,
-    text,
+    longText,
     image,
     openModal,
     setOpenModal,
@@ -32,13 +32,8 @@ const Options = (props) => {
   useEffect(() => {
     setImageId(image);
     setHeader(title);
-    setDescription(text);
-  }, [image, title, text]);
-  console.log(
-    "OpenModal:" + openModal,
-    "showTiles:" + showTiles,
-    "showLarge:" + showLarge
-  );
+    setDescription(longText);
+  }, [image, title, longText]);
 
   const changeHandler = (event) => {
     setShowLarge(!showLarge);
@@ -46,7 +41,7 @@ const Options = (props) => {
     const id = event.target.id;
     const image = WheelOptions.wheelOptions[id].image;
     const header = WheelOptions.wheelOptions[id].title;
-    const text = WheelOptions.wheelOptions[id].text;
+    const text = WheelOptions.wheelOptions[id].longText;
     setImageId(image);
     setHeader(header);
     setDescription(text);
@@ -74,7 +69,7 @@ const Options = (props) => {
             <div className={styles.header}>{header}</div>
           )}
           {openModal ? (
-            <div className={styles.description}>{text}</div>
+            <div className={styles.description}>{longText}</div>
           ) : (
             <div className={styles.description}>{description}</div>
           )}

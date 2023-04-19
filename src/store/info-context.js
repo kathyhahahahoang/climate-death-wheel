@@ -5,6 +5,8 @@ const InfoContext = React.createContext({
   setTitle: () => {},
   text: "",
   setText: () => {},
+  longText: "",
+  setLongText: () => {},
   image: "",
   setImage: () => {},
   icon: "",

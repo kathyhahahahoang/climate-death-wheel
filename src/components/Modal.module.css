@@ -38,23 +38,23 @@
 
 .heading {
   text-transform: uppercase;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
 }
 
 .text {
-  font-size: 1.2rem;
-  line-height: 1.1;
+  font-size: 1.6rem;
+  line-height: 1;
   /* background-color: beige; */
 }
 
 .close {
-  font-size: 4rem;
+  font-size: 2.5rem;
   padding: 1rem;
   /* background-color: aqua; */
   position: absolute;
   cursor: pointer;
-  top: -1.5rem;
-  right: 0;
+  top: -1.6rem;
+  right: -0.8rem;
   z-index: 30;
 }
 
