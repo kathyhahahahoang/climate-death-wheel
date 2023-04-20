@@ -1,6 +1,7 @@
 import question from "../img/question.PNG";
 import questionSmall from "../img/questionSmall.PNG";
 import wheel from "../img/wheel.PNG";
+import wheelSmall from "../img/wheelSmall.PNG";
 import styles from "./Wheel.module.css";
 import Modal from "./Modal";
 import { wheelOptions } from "../constants/WheelOptions";
@@ -104,11 +105,17 @@ const Wheel = ({ resultRef }) => {
 
         <img
           className={styles.question}
-          srcSet={` ${questionSmall} 768w, ${question} 1280w`}
+          srcSet={`${questionSmall} 600w,  ${question} 1280w`}
+          // sizes="(max-width: 56.25em) 700px, (max-width: 37.5em) 30vw, 300px"
+          sizes="(max-width: 600px) 600px, (min-width: 601px) 1280px"
           alt="What will be your cause of death text"
+          src={question}
         ></img>
+
         <img
           className={styles.wheel}
+          srcSet={`${wheelSmall} 600w,  ${wheel} 1280w`}
+          sizes="(max-width: 600px) 600px, (min-width: 601px) 1280px"
           src={wheel}
           alt="roulette wheel"
           onClick={spinHandler}

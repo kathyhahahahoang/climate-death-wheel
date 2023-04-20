@@ -80,28 +80,26 @@ const Options = (props) => {
         <div className={styles["left-container"]}>
           <div className={styles.header}>Wanna learn more?</div>
           <div className={styles.description}>
-            Global climate change is not a future problem. Changes to Earth’s
-            climate driven by increased human emissions of heat-trapping
-            greenhouse gases are already having widespread effects on the
-            environment: glaciers and ice sheets are shrinking, river and lake
-            ice is breaking up earlier, plant and animal geographic ranges are
-            shifting, and plants and trees are blooming sooner. Effects that
-            scientists had long predicted would result from global climate
-            change are now occurring, such as sea ice loss, accelerated sea
-            level rise, and longer, more intense heat waves. <br />
+            Climate change is not a future problem. Changes to Earth’s climate
+            driven by increased human emissions of heat-trapping greenhouse
+            gases are already having widespread effects on the environment:
+            glaciers and ice sheets are shrinking, river and lake ice are
+            breaking up earlier, plant and animal geographic ranges are
+            shifting, and plants and trees are blooming sooner.
+            <br />
             <br />
             Some changes (such as droughts, wildfires, and extreme rainfall) are
-            happening faster than scientists previously assessed. In fact,
-            according to the Intergovernmental Panel on Climate Change (IPCC),
-            modern humans have never before seen the observed changes in our
-            global climate, and some of these changes are irreversible over the
-            next hundreds to thousands of years. Scientists have high confidence
-            that global temperatures will continue to rise for many decades,
-            mainly due to greenhouse gases produced by human activities.
+            happening faster than scientists previously assessed. According to
+            the Intergovernmental Panel on Climate Change (IPCC), modern humans
+            have never before seen the observed changes in our global climate,
+            and some of these changes are irreversible over the next hundreds to
+            thousands of years. Scientists have high confidence that global
+            temperatures will continue to rise for many decades, mainly due to
+            greenhouse gases produced by human activities.
             <br />
             <br />
-            Click on the images to the right to find out more about how climate
-            change is affecting us now &rarr;
+            Click on the images to find out more about how climate change is
+            affecting us now.
           </div>
         </div>
       )}

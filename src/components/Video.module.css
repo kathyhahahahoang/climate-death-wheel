@@ -1,57 +1,100 @@
 .container {
-  /* text-align: center; */
   max-width: 87.5rem;
-  /* background-color: aqua; */
   margin: 0 auto;
   padding: 5rem 4rem;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    max-width: 600px;
+    flex-direction: column;
+    padding: 0;
+  }
 }
 
 .left-container {
-  /* background-color: azure; */
   min-width: 50rem;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    padding: 1rem;
+    min-width: 15rem;
+  }
 }
 .img {
   height: 536px;
   margin-right: 2rem;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    max-width: 600px;
+    display: none;
+  }
 }
 
 .video {
   right: 50%;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .text {
   text-align: center;
   font-size: 7rem;
   text-transform: uppercase;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    font-size: 3.4rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .right-container {
-  /* background-color: beige; */
   width: 30rem;
-  /* padding: 2rem; */
   margin: auto;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    width: calc(100% - 5rem);
+  }
 }
 
 .heading {
   text-transform: uppercase;
   font-size: 4rem;
   text-align: center;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    font-size: 3.4rem;
+    max-width: 600px;
+    padding-top: 2rem;
+    line-height: 2.7rem;
+  }
 }
 
-.form-container {
-  /* background-color: antiquewhite; */
+.sorry {
+  text-align: center;
+  text-shadow: 0 0.2px 0.2px rgba(0, 0, 0);
 }
+
 .label-container {
-  /* background-color: bisque; */
   display: flex;
   flex-direction: column;
   margin: 2rem 0;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    text-shadow: none;
+    margin: 1.5rem 0;
+  }
 }
 
 .label {
   font-size: 2rem;
+  text-shadow: 0 0.2px 0.2px rgba(0, 0, 0);
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    text-shadow: none;
+  }
 }
 
 .input {
@@ -68,6 +111,11 @@
 
 .check-text {
   font-size: 1.4rem;
+  text-shadow: 0 0.2px 0.2px rgba(0, 0, 0);
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    text-shadow: none;
+  }
 }
 
 .button {
@@ -87,4 +135,8 @@
   font-size: 1.8rem;
   text-align: center;
   padding-top: 2rem;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    font-size: 1.3rem;
+  }
 }

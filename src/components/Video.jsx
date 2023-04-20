@@ -68,6 +68,10 @@ const Video = () => {
       </div>
       <div className={styles["right-container"]}>
         <p className={styles.heading}>And add your result to the map below!</p>
+        <p className={styles.sorry}>
+          (Sorry if your results weren't 100% accurate. The wheel was handmade
+          so it's not a perfect circle!)
+        </p>
         <form className={styles["form-container"]} onSubmit={submitHandler}>
           <div className={styles["label-container"]}>
             <label className={styles.label} htmlFor="name">

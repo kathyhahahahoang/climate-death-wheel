@@ -17,4 +17,10 @@ code {
   max-width: 82rem;
   margin: 0 4rem;
   height: 75vh;
+
+  @media (max-width: 600px) {
+    width: calc(100% - 5rem);
+    height: 50vh;
+    margin: 4rem auto;
+  }
 }

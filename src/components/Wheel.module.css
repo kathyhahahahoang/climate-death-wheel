@@ -12,30 +12,47 @@
   align-items: center;
   justify-content: center;
 
-  /* position: relative;
-  top: 50%;
-  transform: translateY(-50%); */
+  @media (max-width: 600px) and (orientation: portrait) {
+    display: initial;
+    text-align: center;
+    padding: 2rem;
+  }
 }
 
 .question {
-  /* height: 40rem; */
   height: 35%;
   width: 35%;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    width: 90%;
+  }
 }
 
 .wheel {
   cursor: pointer;
-  /* height: 44rem; */
   height: 52%;
   width: 52%;
   position: relative;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    height: 90%;
+    width: 90%;
+  }
 }
 
 .text {
   font-size: 3rem;
+  text-shadow: 0 0.5px 0.5px rgba(0, 0, 0);
   line-height: 2.3rem;
   padding: 0.8rem;
   position: absolute;
   right: 1rem;
   bottom: 2rem;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    font-size: 2.4rem;
+    line-height: 1.6rem;
+    text-shadow: none;
+    bottom: 1rem;
+  }
 }

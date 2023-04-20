@@ -3,7 +3,12 @@
   max-width: 87.5;
   margin: 3rem auto 0;
   text-align: center;
-
   text-transform: uppercase;
   padding: 4rem;
+
+  @media (max-width: 600px) and (orientation: portrait) {
+    font-size: 3.2rem;
+    padding: 0 1rem;
+    line-height: 2.7rem;
+  }
 }
