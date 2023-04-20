@@ -2,21 +2,21 @@ import styles from "./GridImages.module.css";
 import poverty from "../img/poverty.jpg";
 import povertySmall from "../img/poverty-small.jpg";
 import capitalism from "../img/capitalism.jpg";
-import capitalismSmall from "../img/capitalism-small.jpg";
+
 import disease from "../img/disease.jpg";
-import diseaseSmall from "../img/disease-small.jpg";
+
 import drought from "../img/drought.jpg";
-import droughtSmall from "../img/drought-small.jpg";
+
 import heatwave from "../img/heatwave.jpg";
-import heatwaveSmall from "../img/heatwave-small.jpg";
+
 import permafrost from "../img/permafrost.jpg";
-import permafrostSmall from "../img/permafrost-small.jpg";
+
 import poorAirQuality from "../img/poorAirQuality.jpg";
-import poorAirQualitySmall from "../img/poorAirQuality-small.jpg";
+
 import risingSeaLevels from "../img/risingSeaLevels.jpg";
-import risingSeaLevelsSmall from "../img/risingSeaLevels-small.jpg";
+
 import superstorm from "../img/superstorm.jpg";
-import superstormSmall from "../img/superstorm-small.jpg";
+
 import WheelOptions from "../constants/WheelOptions";
 import InfoContext from "../store/info-context";
 import { useState, useContext, useEffect } from "react";
@@ -138,7 +138,6 @@ const Options = (props) => {
               className={styles.pic}
               onClick={changeHandler}
               src={heatwave}
-              srcSet={`${heatwaveSmall} 600w,  ${heatwave} 1280w`}
               id="23"
               alt="Burning mountains"
             ></img>
@@ -150,7 +149,6 @@ const Options = (props) => {
               className={styles.pic}
               onClick={changeHandler}
               src={poverty}
-              srcSet={`${povertySmall} 600w,  ${poverty} 1280w`}
               id="0"
               alt="Women surrounded by plastic garbage"
             ></img>

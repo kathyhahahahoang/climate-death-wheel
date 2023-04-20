@@ -101,22 +101,14 @@ const Wheel = ({ resultRef }) => {
             onReadMore={readMoreHandler}
           />
         )}
-
-        {/* <img
-          className={styles.question}
-          srcSet={`${questionSmall} 600w,  ${question} 1280w`}
-          // sizes="(max-width: 56.25em) 700px, (max-width: 37.5em) 30vw, 300px"
-          sizes="(max-width: 600px) 600px, (min-width: 601px) 1280px"
-          alt="What will be your cause of death text"
-          src={question}
-        ></img> */}
         <picture className={styles["question-container"]}>
           <source
             className={styles.question}
-            media="(max-width: 600px)"
+            media="(max-width: 767px)"
             srcSet={questionSmall}
             alt="What will be your cause of death text"
           />
+
           <source
             className={styles.question}
             srcSet={question}
@@ -131,7 +123,7 @@ const Wheel = ({ resultRef }) => {
         <picture className={styles["wheel-container"]}>
           <source
             className={styles.wheel}
-            media="(max-width: 600px)"
+            media="(max-width: 767px)"
             srcSet={wheelSmall}
             alt="roulette wheel"
           />

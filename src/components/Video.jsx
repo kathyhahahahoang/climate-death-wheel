@@ -60,8 +60,6 @@ const Video = () => {
         <video
           className={styles.video}
           src={video}
-          width="300"
-          height="540"
           controls="controls"
           autoPlay={false}
         />

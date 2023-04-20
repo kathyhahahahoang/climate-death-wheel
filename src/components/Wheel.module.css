@@ -12,10 +12,19 @@
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     display: initial;
     text-align: center;
     padding: 2rem;
+  }
+
+  @media (min-width: 601px) and (orientation: portrait) {
+    display: initial;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  @media (min-width: 768px) and (orientation: landscape) {
   }
 }
 
@@ -27,9 +36,18 @@
   width: 83%;
   transform: translatex(20%);
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     transform: translate(0);
     width: 100%;
+  }
+
+  @media (min-width: 601px) and (orientation: portrait) {
+    width: 70%;
+
+    transform: none;
+  }
+
+  @media (min-width: 768px) and (orientation: landscape) {
   }
 }
 
@@ -43,9 +61,17 @@
   height: 90%;
   width: 90%;
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     width: 100%;
     height: 100%;
+  }
+
+  @media (min-width: 601px) and (orientation: portrait) {
+    width: 80%;
+    height: 80%;
+  }
+
+  @media (min-width: 768px) and (orientation: landscape) {
   }
 }
 
@@ -58,11 +84,22 @@
   right: 1rem;
   bottom: 2rem;
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     font-size: 2.4rem;
     line-height: 1.6rem;
     text-shadow: none;
     bottom: 0rem;
     right: 0;
+  }
+
+  @media (min-width: 601px) and (orientation: portrait) {
+    font-size: 3rem;
+    line-height: 2rem;
+    text-shadow: none;
+    bottom: 0rem;
+    right: 0;
+  }
+
+  @media (min-width: 768px) and (orientation: landscape) {
   }
 }

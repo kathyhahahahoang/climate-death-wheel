@@ -5,8 +5,14 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     max-width: 600px;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  @media (min-width: 601px) and (orientation: portrait) {
+    max-width: 767px;
     flex-direction: column;
     padding: 0;
   }
@@ -15,27 +21,43 @@
 .left-container {
   min-width: 50rem;
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     padding: 1rem;
     min-width: 15rem;
+  }
+
+  @media (min-width: 601px) and (orientation: portrait) {
+    min-width: 30rem;
+    padding: 0 4rem;
+    text-align: center;
   }
 }
 .img {
   height: 536px;
   margin-right: 2rem;
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     max-width: 600px;
     display: none;
+  }
+
+  @media (min-width: 601px) and (orientation: portrait) {
+    height: 300px;
   }
 }
 
 .video {
-  right: 50%;
+  width: 350px;
+  height: 540px;
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     display: block;
     margin: 0 auto;
+  }
+
+  @media (min-width: 601px) and (orientation: portrait) {
+    height: 350px;
+    width: auto;
   }
 }
 
@@ -44,9 +66,14 @@
   font-size: 7rem;
   text-transform: uppercase;
 
-  @media (max-width: 600px) and (orientation: portrait) {
-    font-size: 3.4rem;
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
+    font-size: 3rem;
     padding-bottom: 1rem;
+  }
+
+  @media (min-width: 601px) and (orientation: portrait) {
+    font-size: 4rem;
+    padding: 4rem 0 1rem;
   }
 }
 
@@ -54,8 +81,12 @@
   width: 30rem;
   margin: auto;
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     width: calc(100% - 5rem);
+  }
+
+  @media (min-width: 601px) and (orientation: portrait) {
+    width: calc(100% - 9rem);
   }
 }
 
@@ -64,11 +95,17 @@
   font-size: 4rem;
   text-align: center;
 
-  @media (max-width: 600px) and (orientation: portrait) {
-    font-size: 3.4rem;
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
+    font-size: 3rem;
     max-width: 600px;
-    padding-top: 2rem;
+    padding-top: 1rem;
     line-height: 2.7rem;
+  }
+
+  @media (min-width: 601px) and (orientation: portrait) {
+    font-size: 4rem;
+    line-height: 3rem;
+    padding: 1rem 0 0;
   }
 }
 
@@ -82,7 +119,7 @@
   flex-direction: column;
   margin: 2rem 0;
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     text-shadow: none;
     margin: 1.5rem 0;
   }
@@ -92,7 +129,7 @@
   font-size: 2rem;
   text-shadow: 0 0.2px 0.2px rgba(0, 0, 0);
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     text-shadow: none;
   }
 }
@@ -113,7 +150,7 @@
   font-size: 1.4rem;
   text-shadow: 0 0.2px 0.2px rgba(0, 0, 0);
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     text-shadow: none;
     font-size: 1rem;
   }
@@ -137,7 +174,7 @@
   text-align: center;
   padding-top: 2rem;
 
-  @media (max-width: 600px) and (orientation: portrait) {
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     font-size: 1.3rem;
   }
 }
