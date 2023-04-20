@@ -2,10 +2,10 @@ import poverty from "../img/poverty.jpg";
 import capitalism from "../img/capitalism.jpg";
 import disease from "../img/disease.jpg";
 import drought from "../img/drought.jpg";
-import heatwave from "../img/heat-wave.jpg";
+import heatwave from "../img/heatwave.jpg";
 import permafrost from "../img/permafrost.jpg";
-import poorAirQuality from "../img/poor-air-quality.jpg";
-import risingSeaLevels from "../img/rising-sea-levels.jpg";
+import poorAirQuality from "../img/poorAirQuality.jpg";
+import risingSeaLevels from "../img/risingSeaLevels.jpg";
 import superstorm from "../img/superstorm.jpg";
 import winner from "../img/winner.jpg";
 

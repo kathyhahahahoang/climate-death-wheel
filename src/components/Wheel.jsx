@@ -14,7 +14,6 @@ const Wheel = ({ resultRef }) => {
     setTitle,
     text,
     setText,
-    longText,
     setLongText,
     image,
     setImage,
@@ -103,16 +102,54 @@ const Wheel = ({ resultRef }) => {
           />
         )}
 
-        <img
+        {/* <img
           className={styles.question}
           srcSet={`${questionSmall} 600w,  ${question} 1280w`}
           // sizes="(max-width: 56.25em) 700px, (max-width: 37.5em) 30vw, 300px"
           sizes="(max-width: 600px) 600px, (min-width: 601px) 1280px"
           alt="What will be your cause of death text"
           src={question}
-        ></img>
+        ></img> */}
+        <picture className={styles["question-container"]}>
+          <source
+            className={styles.question}
+            media="(max-width: 600px)"
+            srcSet={questionSmall}
+            alt="What will be your cause of death text"
+          />
+          <source
+            className={styles.question}
+            srcSet={question}
+            alt="What will be your cause of death text"
+          />
+          <img
+            className={styles.question}
+            src={question}
+            alt="What will be your cause of death text"
+          />
+        </picture>
+        <picture className={styles["wheel-container"]}>
+          <source
+            className={styles.wheel}
+            media="(max-width: 600px)"
+            srcSet={wheelSmall}
+            alt="roulette wheel"
+          />
+          <source
+            className={styles.wheel}
+            srcSet={wheel}
+            alt="roulette wheel"
+          />
+          <img
+            className={styles.wheel}
+            src={wheel}
+            alt="roulette wheel"
+            onClick={spinHandler}
+            style={spinWheel}
+          />
+        </picture>
 
-        <img
+        {/* <img
           className={styles.wheel}
           srcSet={`${wheelSmall} 600w,  ${wheel} 1280w`}
           sizes="(max-width: 600px) 600px, (min-width: 601px) 1280px"
@@ -120,7 +157,7 @@ const Wheel = ({ resultRef }) => {
           alt="roulette wheel"
           onClick={spinHandler}
           style={spinWheel}
-        ></img>
+        ></img> */}
         <p className={styles.text}>
           Click on the <br />
           wheel to spin!
