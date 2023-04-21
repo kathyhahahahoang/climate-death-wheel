@@ -135,4 +135,10 @@
     right: 3rem;
     top: 1rem;
   }
+
+  @media (min-width: 601px) and (orientation: portrait) {
+    font-size: 4rem;
+    top: 0.4rem;
+    right: 6rem;
+  }
 }
