@@ -14,12 +14,10 @@ code {
 
 .leaflet-container {
   margin: 5rem auto;
-  max-width: 82rem;
-  margin: 0 4rem;
+  max-width: 85rem;
   height: 75vh;
 
   @media (max-width: 600px) {
-    width: calc(100% - 5rem);
     height: 50vh;
     margin: 4rem auto;
   }
@@ -28,5 +26,7 @@ code {
     width: calc(100% - 9rem);
     height: 60vh;
     margin: 3rem auto;
+    background-color: red;
+    padding: 1rem;
   }
 }

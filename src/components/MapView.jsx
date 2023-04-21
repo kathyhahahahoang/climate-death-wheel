@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import InfoContext from "../store/info-context";
 import Icons from "../constants/Icons";
+import styles from "./MapView.module.css";
 
 const MapView = () => {
   const [deaths, setDeaths] = useState([]);
@@ -34,7 +35,7 @@ const MapView = () => {
   }, [submitForm]);
 
   return (
-    <div>
+    <div className={styles.map}>
       <MapContainer center={[0, 0]} zoom={2} scrollWheelZoom={true}>
         <TileLayer
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
