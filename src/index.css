@@ -13,20 +13,41 @@ code {
 }
 
 .leaflet-container {
-  margin: 5rem auto;
-  max-width: 85rem;
+  margin: 0 auto;
+  width: calc(100% - 16rem);
   height: 75vh;
+  z-index: 5;
+  /* background-color: blanchedalmond; */
 
   @media (max-width: 600px) {
     height: 50vh;
-    margin: 4rem auto;
+    width: calc(100% - 2rem);
   }
 
-  @media (min-width: 601px) and (orientation: portrait) {
-    width: calc(100% - 9rem);
+  @media (min-width: 601px) {
+    width: calc(100% - 6rem);
+    height: 40vh;
+  }
+
+  @media (min-width: 768px) {
+    width: calc(100% - 10rem);
+    height: 40vh;
+  }
+
+  @media (min-width: 1024px) and (orientation: portrait) {
+    width: calc(100% - 16rem);
+  }
+
+  @media (min-width: 1024px) and (orientation: landscape) {
+    width: calc(100% - 8rem);
     height: 60vh;
-    margin: 3rem auto;
-    background-color: red;
-    padding: 1rem;
+  }
+
+  @media (min-width: 1366px) and (orientation: landscape) {
+    width: calc(100% - 18rem);
+  }
+
+  @media (min-width: 1550px) {
+    width: calc(100% - 28rem);
   }
 }

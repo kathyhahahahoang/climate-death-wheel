@@ -104,7 +104,9 @@ const Wheel = ({ resultRef }) => {
         <picture className={styles["question-container"]}>
           <source
             className={styles.question}
-            media="(max-width: 767px)"
+            // media="(max-width: 768px)"
+            // media="(max-width: 1024px) and (orientation: landscape)"
+            media="(orientation: portrait)"
             srcSet={questionSmall}
             alt="What will be your cause of death text"
           />
@@ -123,7 +125,9 @@ const Wheel = ({ resultRef }) => {
         <picture className={styles["wheel-container"]}>
           <source
             className={styles.wheel}
-            media="(max-width: 767px)"
+            // media="(max-width: 768px)"
+            // media="(max-width: 1024px) and (orientation: landscape)"
+            media="(orientation: portrait)"
             srcSet={wheelSmall}
             alt="roulette wheel"
           />

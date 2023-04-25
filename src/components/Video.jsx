@@ -78,7 +78,7 @@ const Video = () => {
             <input
               type="text"
               id="name"
-              placeholder="Kathy"
+              // placeholder="Anonymous"
               value={enteredName}
               onChange={nameChangeHandler}
               className={styles.input}
@@ -107,7 +107,7 @@ const Video = () => {
                     value={address}
                     required
                     {...getInputProps({
-                      placeholder: "Search Places ...",
+                      // placeholder: "Search Places ...",
                     })}
                   />
                   <div className="autocomplete-dropdown-container">
