@@ -4,7 +4,7 @@ import GridImages from "./components/GridImages";
 import Video from "./components/Video";
 import MapView from "./components/MapView";
 import Footer from "./components/Footer";
-import styles from "./App.module.css";
+import styles from "./App.module.scss";
 import { useRef } from "react";
 
 import "./fonts/kathy-regular-webfont.woff2";
