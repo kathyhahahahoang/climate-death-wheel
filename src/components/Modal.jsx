@@ -1,4 +1,4 @@
-import styles from "./Modal.module.css";
+import styles from "./Modal.module.scss";
 import { useContext } from "react";
 
 import InfoContext from "../store/info-context";

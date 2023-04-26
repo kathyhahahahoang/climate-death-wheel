@@ -1,4 +1,4 @@
-import styles from "./Quote1.module.css";
+import styles from "./Quote1.module.scss";
 import { forwardRef } from "react";
 
 const Quote1 = forwardRef((props, ref) => {

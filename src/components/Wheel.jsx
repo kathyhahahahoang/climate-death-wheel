@@ -2,7 +2,7 @@ import question from "../img/question.PNG";
 import questionSmall from "../img/questionSmall.PNG";
 import wheel from "../img/wheel.PNG";
 import wheelSmall from "../img/wheelSmall.PNG";
-import styles from "./Wheel.module.css";
+import styles from "./Wheel.module.scss";
 import Modal from "./Modal";
 import { wheelOptions } from "../constants/WheelOptions";
 import { useState, useContext, useEffect } from "react";

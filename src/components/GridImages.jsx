@@ -1,4 +1,4 @@
-import styles from "./GridImages.module.css";
+import styles from "./GridImages.module.scss";
 import poverty from "../img/poverty.jpg";
 import povertySmall from "../img/poverty-small.jpg";
 import capitalism from "../img/capitalism.jpg";

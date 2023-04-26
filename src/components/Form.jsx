@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import styles from "./Form.module.css";
+import styles from "./Form.module.scss";
 import InfoContext from "../store/info-context";
 
 const Form = () => {
