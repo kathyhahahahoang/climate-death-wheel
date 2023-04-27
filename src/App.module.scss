@@ -5,26 +5,30 @@
 }
 
 .app {
-  background-image: url("./img/background.jpg");
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
   font-family: "kathyregular";
-
-  @media only screen and (max-width: 600px) and (orientation: portrait) {
-    background-image: url("./img/background-small.jpg");
-  }
-
-  @media (min-width: 601px) and (orientation: portrait) {
-    background-image: url("./img/background-portrait.jpg");
-  }
-
-  @media (min-width: 1024px) and (orientation: landscape) {
-    background-image: url("./img/background-landscape.jpg");
-  }
 }
+
+// .app {
+//   background-image: url("./img/background.jpg");
+//   min-height: 100vh;
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+//   background-position: center;
+//   background-size: cover;
+//   font-family: "kathyregular";
+
+//   @media only screen and (max-width: 600px) and (orientation: portrait) {
+//     background-image: url("./img/background-small.jpg");
+//   }
+
+//   @media (min-width: 601px) and (orientation: portrait) {
+//     background-image: url("./img/background-portrait.jpg");
+//   }
+
+//   @media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+//     background-image: url("./img/background-landscape.jpg");
+//   }
+// }
 
 @font-face {
   font-family: "kathyregular";

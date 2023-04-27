@@ -56,12 +56,16 @@ const Video = () => {
     <div className={styles.container}>
       <div className={styles["left-container"]}>
         <p className={styles.text}>See the sign in action!</p>
-        <img className={styles.img} src={kathy} />
+        <img
+          className={styles.img}
+          src={kathy}
+          alt="Kathy holding her protest sign"
+        />
         <video
           className={styles.video}
           src={video}
           controls="controls"
-          autoPlay={false}
+          autoPlay="true"
         />
       </div>
       <div className={styles["right-container"]}>

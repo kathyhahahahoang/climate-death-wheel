@@ -1,22 +1,13 @@
 import styles from "./GridImages.module.scss";
 import poverty from "../img/poverty.jpg";
-import povertySmall from "../img/poverty-small.jpg";
 import capitalism from "../img/capitalism.jpg";
-
 import disease from "../img/disease.jpg";
-
 import drought from "../img/drought.jpg";
-
 import heatwave from "../img/heatwave.jpg";
-
 import permafrost from "../img/permafrost.jpg";
-
 import poorAirQuality from "../img/poorAirQuality.jpg";
-
 import risingSeaLevels from "../img/risingSeaLevels.jpg";
-
 import superstorm from "../img/superstorm.jpg";
-
 import WheelOptions from "../constants/WheelOptions";
 import InfoContext from "../store/info-context";
 import { useState, useContext, useEffect } from "react";
@@ -143,6 +134,7 @@ const Options = (props) => {
             ></img>
           </div>
         )}
+
         {showTiles && (
           <div className={styles["pic-container"]}>
             <img

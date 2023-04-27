@@ -51,3 +51,11 @@ code {
     width: calc(100% - 28rem);
   }
 }
+
+.leaflet-popup {
+  margin-bottom: 70px;
+}
+
+.leaflet-popup-content {
+  line-height: 0.5rem;
+}

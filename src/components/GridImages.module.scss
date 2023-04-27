@@ -58,6 +58,10 @@
   @media (min-width: 1024px) and (orientation: landscape) {
     padding: 0 1rem 0 0;
   }
+
+  @media (min-width: 1024px) and (orientation: portrait) {
+    padding: 0.8rem 1rem 0 0;
+  }
 }
 
 .right-container {
@@ -159,11 +163,7 @@
   }
 
   @media (min-device-width: 700px) and (orientation: landscape) {
-    font-size: 2rem;
-  }
-
-  @media (min-device-width: 768px) and (max-device-width: 1179px) and (orientation: landscape) {
-    font-size: 2rem;
+    font-size: 2.6rem;
   }
 
   @media (min-width: 1024px) and (orientation: portrait) {
@@ -180,14 +180,19 @@
   text-transform: none;
 
   @media only screen and (max-width: 600px) and (orientation: portrait) {
-    font-size: 1.2rem;
-    text-shadow: none;
+    font-size: 1.4rem;
+    text-shadow: 0 0.1px 0.1px rgba(0, 0, 0);
   }
 
   @media (min-width: 601px) {
     font-size: 1.4rem;
     text-shadow: 0 0.3px 0.3px rgba(0, 0, 0);
     padding-right: 1rem;
+  }
+
+  @media (min-width: 768px) and (orientation: portrait) {
+    font-size: 1.6rem;
+    text-shadow: 0 0.2px 0.2px rgba(0, 0, 0);
   }
 
   @media (min-width: 1024px) and (orientation: portrait) {

@@ -52,7 +52,7 @@ const MapView = () => {
               key={person.id}
               {...iconProps}
             >
-              <Popup>
+              <Popup className={styles.popup}>
                 <p>Name: {person.name}</p>
                 <p>Death by: {person.cause}</p>
               </Popup>

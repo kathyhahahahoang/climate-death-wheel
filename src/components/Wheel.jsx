@@ -104,8 +104,6 @@ const Wheel = ({ resultRef }) => {
         <picture className={styles["question-container"]}>
           <source
             className={styles.question}
-            // media="(max-width: 768px)"
-            // media="(max-width: 1024px) and (orientation: landscape)"
             media="(orientation: portrait)"
             srcSet={questionSmall}
             alt="What will be your cause of death text"
@@ -125,8 +123,6 @@ const Wheel = ({ resultRef }) => {
         <picture className={styles["wheel-container"]}>
           <source
             className={styles.wheel}
-            // media="(max-width: 768px)"
-            // media="(max-width: 1024px) and (orientation: landscape)"
             media="(orientation: portrait)"
             srcSet={wheelSmall}
             alt="roulette wheel"
@@ -144,16 +140,6 @@ const Wheel = ({ resultRef }) => {
             style={spinWheel}
           />
         </picture>
-
-        {/* <img
-          className={styles.wheel}
-          srcSet={`${wheelSmall} 600w,  ${wheel} 1280w`}
-          sizes="(max-width: 600px) 600px, (min-width: 601px) 1280px"
-          src={wheel}
-          alt="roulette wheel"
-          onClick={spinHandler}
-          style={spinWheel}
-        ></img> */}
         <p className={styles.text}>
           Click on the <br />
           wheel to spin!

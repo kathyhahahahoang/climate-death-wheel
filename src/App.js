@@ -1,4 +1,5 @@
 import Wheel from "./components/Wheel";
+import Background from "./components/Background";
 import Quote1 from "./components/Quote1";
 import GridImages from "./components/GridImages";
 import Video from "./components/Video";
@@ -49,6 +50,7 @@ function App() {
       }}
     >
       <div className={styles.app}>
+        <Background />
         <Wheel resultRef={resultRef} />
         <Quote1 ref={resultRef} />
         <GridImages />
