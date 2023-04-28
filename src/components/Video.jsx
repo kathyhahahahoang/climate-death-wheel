@@ -65,7 +65,7 @@ const Video = () => {
           className={styles.video}
           src={video}
           controls="controls"
-          autoPlay="true"
+          autoPlay={true}
         />
       </div>
       <div className={styles["right-container"]}>

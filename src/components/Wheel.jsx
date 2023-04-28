@@ -140,10 +140,13 @@ const Wheel = ({ resultRef }) => {
             style={spinWheel}
           />
         </picture>
-        <p className={styles.text}>
-          Click on the <br />
-          wheel to spin!
-        </p>
+        <div className={styles.text}>
+          <p>
+            Click on the <br />
+            wheel to spin!
+          </p>
+          <p className={styles.small}>(Good luck!)</p>
+        </div>
       </div>
     </div>
   );
