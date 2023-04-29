@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import styles from "./Video.module.scss";
 import video from "../img/video.MP4";
-import kathy from "../img/kathy.jpg";
+import kathy from "../img/kathy.webp";
 import InfoContext from "../store/info-context";
 
 import PlacesAutocomplete, {

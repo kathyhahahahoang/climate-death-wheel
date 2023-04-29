@@ -1,18 +1,18 @@
-import styles from "./GridImages.module.scss";
-import poverty from "../img/poverty.webp";
-import capitalism from "../img/capitalism.webp";
-import disease from "../img/disease.webp";
-import drought from "../img/drought.webp";
-import heatwave from "../img/heatwave.webp";
-import permafrost from "../img/permafrost.webp";
-import poorAirQuality from "../img/poorAirQuality.webp";
-import risingSeaLevels from "../img/risingSeaLevels.webp";
-import superstorm from "../img/superstorm.webp";
+import styles from "./Grid.module.scss";
+import capitalismIcon from "../img/capitalism-icon.webp";
+import povertyIcon from "../img/poverty-icon.webp";
+import poorAirQualityIcon from "../img/poorAirQuality-icon.webp";
+import permafrostIcon from "../img/permafrost-icon.webp";
+import heatwaveIcon from "../img/heatwave-icon.webp";
+import risingSeaLevelsIcon from "../img/risingSeaLevels-icon.webp";
+import diseaseIcon from "../img/disease-icon.webp";
+import droughtIcon from "../img/drought-icon.webp";
+import superstormIcon from "../img/superstorm-icon.webp";
 import WheelOptions from "../constants/WheelOptions";
 import InfoContext from "../store/info-context";
 import { useState, useContext, useEffect } from "react";
 
-const Options = (props) => {
+const Grid = () => {
   const {
     title,
     longText,
@@ -105,7 +105,7 @@ const Options = (props) => {
       )}
 
       <div className={styles["right-container"]}>
-        {showLarge && (
+        {/* {showLarge && (
           <div className={styles.largePic}>
             {openModal ? (
               <img
@@ -121,111 +121,107 @@ const Options = (props) => {
               ></img>
             )}
           </div>
-        )}
-
-        {showTiles && (
-          <div className={styles["pic-container"]}>
+        )} */}
+        {showLarge &&
+          (openModal ? (
             <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={heatwave}
-              id="23"
-              alt="Burning mountains"
-            ></img>
-          </div>
-        )}
-
-        {showTiles && (
-          <div className={styles["pic-container"]}>
+              className={styles.largePic}
+              onClick={largePicChangeHandler}
+              src={image}
+              alt="Effects of climate change"
+            />
+          ) : (
             <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={poverty}
-              id="0"
-              alt="Women surrounded by plastic garbage"
-            ></img>
-          </div>
-        )}
+              className={styles.largePic}
+              onClick={largePicChangeHandler}
+              src={imageId}
+              alt="Effects of climate change"
+            />
+          ))}
         {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={disease}
-              id="30"
-              alt="Microscopic close-up of disease"
-            ></img>
-          </div>
+          <img
+            src={heatwaveIcon}
+            className={styles.pic}
+            onClick={changeHandler}
+            id="23"
+            alt="Burning mountains"
+          />
         )}
         {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={drought}
-              id="6"
-              alt="Dried ground"
-            ></img>
-          </div>
+          <img
+            src={povertyIcon}
+            className={styles.pic}
+            onClick={changeHandler}
+            id="0"
+            alt="Woman surrounded by plastic garbage"
+          />
         )}
         {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={capitalism}
-              id="3"
-              alt="Man holding a sign against capitalism at a protest"
-            ></img>
-          </div>
+          <img
+            src={diseaseIcon}
+            className={styles.pic}
+            onClick={changeHandler}
+            id="30"
+            alt="Microscopic close-up of disease"
+          />
         )}
         {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={permafrost}
-              id="17"
-              alt="Aerial view of permafrost"
-            ></img>
-          </div>
+          <img
+            src={droughtIcon}
+            className={styles.pic}
+            onClick={changeHandler}
+            id="6"
+            alt="Dried ground"
+          />
         )}
         {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={poorAirQuality}
-              id="12"
-              alt="Factories spewing out smoke"
-            ></img>
-          </div>
+          <img
+            src={capitalismIcon}
+            className={styles.pic}
+            onClick={changeHandler}
+            id="3"
+            alt="Man holding a sign against capitalism at a protest"
+          />
         )}
         {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={risingSeaLevels}
-              id="42"
-              alt="People walking around their flooded town"
-            ></img>
-          </div>
+          <img
+            src={permafrostIcon}
+            className={styles.pic}
+            onClick={changeHandler}
+            id="17"
+            alt="Aerial view of permafrost"
+          />
         )}
         {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={superstorm}
-              id="36"
-              alt="Aftermath of a hurricane"
-            ></img>
-          </div>
+          <img
+            src={poorAirQualityIcon}
+            className={styles.pic}
+            onClick={changeHandler}
+            id="12"
+            alt="Factories spewing out smoke"
+          />
+        )}
+        {showTiles && (
+          <img
+            src={risingSeaLevelsIcon}
+            className={styles.pic}
+            onClick={changeHandler}
+            id="42"
+            alt="People walking around their flooded town"
+          />
+        )}
+        {showTiles && (
+          <img
+            src={superstormIcon}
+            className={styles.pic}
+            onClick={changeHandler}
+            id="36"
+            alt="Aftermath of a hurricane"
+          />
         )}
       </div>
     </div>
   );
 };
 
-export default Options;
+export default Grid;

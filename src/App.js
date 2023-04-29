@@ -1,7 +1,7 @@
 import Wheel from "./components/Wheel";
 import Background from "./components/Background";
 import Quote1 from "./components/Quote1";
-import GridImages from "./components/GridImages";
+import Grid from "./components/Grid";
 import Video from "./components/Video";
 import MapView from "./components/MapView";
 import Footer from "./components/Footer";
@@ -53,7 +53,7 @@ function App() {
         <Background />
         <Wheel resultRef={resultRef} />
         <Quote1 ref={resultRef} />
-        <GridImages />
+        <Grid />
         <Video />
         <MapView />
         <Footer />

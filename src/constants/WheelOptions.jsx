@@ -1,13 +1,13 @@
-import poverty from "../img/poverty.jpg";
-import capitalism from "../img/capitalism.jpg";
-import disease from "../img/disease.jpg";
-import drought from "../img/drought.jpg";
-import heatwave from "../img/heatwave.jpg";
-import permafrost from "../img/permafrost.jpg";
-import poorAirQuality from "../img/poorAirQuality.jpg";
-import risingSeaLevels from "../img/risingSeaLevels.jpg";
-import superstorm from "../img/superstorm.jpg";
-import winner from "../img/winner.jpg";
+import poverty from "../img/poverty.webp";
+import capitalism from "../img/capitalism.webp";
+import disease from "../img/disease.webp";
+import drought from "../img/drought.webp";
+import heatwave from "../img/heatwave.webp";
+import permafrost from "../img/permafrost.webp";
+import poorAirQuality from "../img/poorAirQuality.webp";
+import risingSeaLevels from "../img/risingSeaLevels.webp";
+import superstorm from "../img/superstorm.webp";
+import winner from "../img/winner.webp";
 
 export const wheelOptions = [
   {

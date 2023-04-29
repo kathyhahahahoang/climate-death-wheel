@@ -1,9 +1,10 @@
-import question from "../img/question.PNG";
-import questionSmall from "../img/questionSmall.PNG";
-import wheel from "../img/wheel.PNG";
-import wheelSmall from "../img/wheelSmall.PNG";
+import question from "../img/question-landscape.avif";
+import questionSmall from "../img/question-portrait.avif";
+import wheel from "../img/wheel.avif";
+import wheelSmall from "../img/wheel-mobile.avif";
 import styles from "./Wheel.module.scss";
 import Modal from "./Modal";
+
 import { wheelOptions } from "../constants/WheelOptions";
 import { useState, useContext, useEffect } from "react";
 import InfoContext from "../store/info-context";

@@ -7,6 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+// body::before {
+//   content: url("../src/img/modal-mobile.webp");
+//   position: absolute;
+//   top: -9999rem;
+//   left: -9999 rem;
+//   opacity: 0;
+// }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
