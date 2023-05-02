@@ -3,7 +3,6 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  /* background-color: red; */
 
   @media only screen and (max-width: 600px) and (orientation: portrait) {
     width: calc(100% - 2rem);
@@ -42,7 +41,6 @@
 }
 
 .left-container {
-  /* background-color: pink; */
   width: 60%;
 
   @media only screen and (max-width: 600px) and (orientation: portrait) {
@@ -209,7 +207,6 @@
 .right-container {
   width: 40%;
   margin: auto 0;
-  /* background-color: aliceblue; */
 
   @media only screen and (max-width: 600px) and (orientation: portrait) {
     width: 100%;

@@ -1,18 +1,18 @@
 import styles from "./GridImages.module.scss";
-import poverty from "../img/poverty.webp";
-import capitalism from "../img/capitalism.webp";
-import disease from "../img/disease.webp";
-import drought from "../img/drought.webp";
-import heatwave from "../img/heatwave.webp";
-import permafrost from "../img/permafrost.webp";
-import poorAirQuality from "../img/poorAirQuality.webp";
-import risingSeaLevels from "../img/risingSeaLevels.webp";
-import superstorm from "../img/superstorm.webp";
+import poverty from "../img/poverty-icon.webp";
+import capitalism from "../img/capitalism-icon.webp";
+import disease from "../img/disease-icon.webp";
+import drought from "../img/drought-icon.webp";
+import heatwave from "../img/heatwave-icon.webp";
+import permafrost from "../img/permafrost-icon.webp";
+import poorAirQuality from "../img/poorAirQuality-icon.webp";
+import risingSeaLevels from "../img/risingSeaLevels-icon.webp";
+import superstorm from "../img/superstorm-icon.webp";
 import WheelOptions from "../constants/WheelOptions";
 import InfoContext from "../store/info-context";
 import { useState, useContext, useEffect } from "react";
 
-const Options = (props) => {
+const GridImages = (props) => {
   const {
     title,
     longText,
@@ -228,4 +228,4 @@ const Options = (props) => {
   );
 };
 
-export default Options;
+export default GridImages;

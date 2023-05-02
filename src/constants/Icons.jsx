@@ -1,5 +1,4 @@
 import L from "leaflet";
-import "./Icons.module.css";
 
 const Icons = {
   disease: L.divIcon({

@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import styles from "./Video.module.scss";
-import video from "../img/video.MP4";
+import video from "../img/video.mp4";
 import kathy from "../img/kathy.webp";
 import InfoContext from "../store/info-context";
 

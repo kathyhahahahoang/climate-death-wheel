@@ -11,10 +11,7 @@ const Modal = (props) => {
   return (
     <div>
       <div className={styles.overlay} onClick={props.onModalHandler}></div>
-      {/* <div
-        className={styles.container}
-        style={{ backgroundImage: `url(${modal})` }}
-      > */}
+
       <div className={styles.container}>
         <picture>
           <source
@@ -34,7 +31,7 @@ const Modal = (props) => {
             alt="Cardboard background"
           />
         </picture>
-        {/* <img className={styles.background} src={modal} /> */}
+
         {/* <div
           className={styles.background}
           style={{ backgroundImage: `url(${modal})` }}

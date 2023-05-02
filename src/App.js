@@ -2,15 +2,13 @@ import Wheel from "./components/Wheel";
 import Background from "./components/Background";
 import Quote1 from "./components/Quote1";
 import Grid from "./components/Grid";
+import GridImages from "./components/GridImages";
 import Video from "./components/Video";
 import MapView from "./components/MapView";
 import Footer from "./components/Footer";
 import styles from "./App.module.scss";
-import { useRef } from "react";
-
+import { useRef, useState } from "react";
 import "./fonts/kathy-regular-webfont.woff2";
-
-import { useState } from "react";
 import InfoContext from "./store/info-context";
 
 function App() {
@@ -53,7 +51,8 @@ function App() {
         <Background />
         <Wheel resultRef={resultRef} />
         <Quote1 ref={resultRef} />
-        <Grid />
+        {/* <Grid /> */}
+        <GridImages />
         <Video />
         <MapView />
         <Footer />

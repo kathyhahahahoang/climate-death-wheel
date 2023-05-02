@@ -10,28 +10,32 @@ const MapView = () => {
   const { submitForm } = useContext(InfoContext);
 
   useEffect(() => {
-    const fetchDeaths = async () => {
-      const response = await fetch(
-        "https://climate-death-wheel-default-rtdb.firebaseio.com/deaths.json"
-      );
-      const responseData = await response.json();
+    try {
+      const fetchDeaths = async () => {
+        const response = await fetch(
+          "https://climate-death-wheel-default-rtdb.firebaseio.com/deaths.json"
+        );
+        const responseData = await response.json();
 
-      const loadedDeaths = [];
+        const loadedDeaths = [];
 
-      for (const key in responseData) {
-        loadedDeaths.push({
-          id: key,
-          name: responseData[key].name,
-          lat: responseData[key].lat,
-          long: responseData[key].long,
-          cause: responseData[key].cause,
-          icon: responseData[key].icon,
-        });
-      }
-      setDeaths(loadedDeaths);
-    };
+        for (const key in responseData) {
+          loadedDeaths.push({
+            id: key,
+            name: responseData[key].name,
+            lat: responseData[key].lat,
+            long: responseData[key].long,
+            cause: responseData[key].cause,
+            icon: responseData[key].icon,
+          });
+        }
+        setDeaths(loadedDeaths);
+      };
 
-    fetchDeaths();
+      fetchDeaths();
+    } catch (error) {
+      console.log(error);
+    }
   }, [submitForm]);
 
   return (

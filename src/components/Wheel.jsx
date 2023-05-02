@@ -1,10 +1,9 @@
-import question from "../img/question-landscape.avif";
-import questionSmall from "../img/question-portrait.avif";
-import wheel from "../img/wheel.avif";
-import wheelSmall from "../img/wheel-mobile.avif";
+import questionLandsape from "../img/question-landscape.PNG";
+import questionPortrait from "../img/question-portrait.PNG";
+import wheel from "../img/wheel.webp";
+import wheelMobile from "../img/wheel-mobile.webp";
 import styles from "./Wheel.module.scss";
 import Modal from "./Modal";
-
 import { wheelOptions } from "../constants/WheelOptions";
 import { useState, useContext, useEffect } from "react";
 import InfoContext from "../store/info-context";
@@ -106,18 +105,18 @@ const Wheel = ({ resultRef }) => {
           <source
             className={styles.question}
             media="(orientation: portrait)"
-            srcSet={questionSmall}
+            srcSet={questionPortrait}
             alt="What will be your cause of death text"
           />
 
           <source
             className={styles.question}
-            srcSet={question}
+            srcSet={questionLandsape}
             alt="What will be your cause of death text"
           />
           <img
             className={styles.question}
-            src={question}
+            src={questionLandsape}
             alt="What will be your cause of death text"
           />
         </picture>
@@ -125,11 +124,12 @@ const Wheel = ({ resultRef }) => {
           <source
             className={styles.wheel}
             media="(orientation: portrait)"
-            srcSet={wheelSmall}
+            srcSet={wheelMobile}
             alt="roulette wheel"
           />
           <source
             className={styles.wheel}
+            media="(orientation: landscape)"
             srcSet={wheel}
             alt="roulette wheel"
           />
