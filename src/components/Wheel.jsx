@@ -5,7 +5,7 @@ import wheelMobile from "../img/wheel-mobile.webp";
 import styles from "./Wheel.module.scss";
 import Modal from "./Modal";
 import { wheelOptions } from "../constants/WheelOptions";
-import { useState, useContext, useEffect } from "react";
+import React, { Suspense, useState, useContext, useEffect } from "react";
 import InfoContext from "../store/info-context";
 
 const Wheel = ({ resultRef }) => {
@@ -28,6 +28,9 @@ const Wheel = ({ resultRef }) => {
   const [showModal, setShowModal] = useState(false);
   const [deg, setDeg] = useState(0);
   const [winner, setWinner] = useState({});
+  const [lazyLoad, setLazyLoad] = useState(false);
+
+  const LazyModal = React.lazy(() => import("./Modal"));
 
   useEffect(() => {
     setDeg(Math.floor(5000 + Math.random() * 10000));
@@ -68,6 +71,7 @@ const Wheel = ({ resultRef }) => {
 
   const openModal = () => {
     const timer = setTimeout(() => {
+      setLazyLoad(true);
       setShowModal(true);
     }, 7000);
     return () => clearTimeout(timer);
@@ -92,7 +96,18 @@ const Wheel = ({ resultRef }) => {
   return (
     <div className={styles.background}>
       <div className={styles.container}>
-        {showModal && (
+        {lazyLoad && showModal && (
+          <Suspense>
+            <LazyModal
+              onModalHandler={modalHandler}
+              title={title}
+              text={text}
+              image={image}
+              onReadMore={readMoreHandler}
+            />
+          </Suspense>
+        )}
+        {/* {showModal && (
           <Modal
             onModalHandler={modalHandler}
             title={title}
@@ -100,7 +115,7 @@ const Wheel = ({ resultRef }) => {
             image={image}
             onReadMore={readMoreHandler}
           />
-        )}
+        )} */}
         <picture className={styles["question-container"]}>
           <source
             className={styles.question}
