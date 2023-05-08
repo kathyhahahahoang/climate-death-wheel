@@ -36,19 +36,16 @@ const Video = () => {
     setAddress("");
     setEnteredName("");
     setSubmitMessage(true);
-    fetch(
-      "https://climate-death-wheel-default-rtdb.firebaseio.com/deaths.json",
-      {
-        method: "POST",
-        body: JSON.stringify({
-          name: enteredName,
-          lat: latitude,
-          long: longitude,
-          cause: title,
-          icon: icon,
-        }),
-      }
-    );
+    fetch("https://climate-18479-default-rtdb.firebaseio.com/deaths.json", {
+      method: "POST",
+      body: JSON.stringify({
+        name: enteredName,
+        lat: latitude,
+        long: longitude,
+        cause: title,
+        icon: icon,
+      }),
+    });
     setSubmitForm(true);
   };
 

@@ -375,6 +375,7 @@ export const wheelOptions = [
     title: "You saved us!",
     text: "Congratulations! World leaders have finally decided to hold corporations responsible for the damage they've done to the planet. We survived!",
     image: winner,
+    icon: "winner",
   },
   {
     index: 42,

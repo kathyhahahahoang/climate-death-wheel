@@ -13,7 +13,7 @@ const MapView = () => {
     try {
       const fetchDeaths = async () => {
         const response = await fetch(
-          "https://climate-death-wheel-default-rtdb.firebaseio.com/deaths.json"
+          "https://climate-18479-default-rtdb.firebaseio.com/deaths.json"
         );
         const responseData = await response.json();
 
@@ -34,7 +34,7 @@ const MapView = () => {
 
       fetchDeaths();
     } catch (error) {
-      console.log(error);
+      console.log("Could not fetch data");
     }
   }, [submitForm]);
 

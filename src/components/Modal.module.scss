@@ -10,9 +10,6 @@
 }
 
 .container {
-  // background-image: url("../img/modal.webp");
-  // background-size: cover;
-
   width: 750px;
   height: 450px;
   position: fixed;
@@ -24,7 +21,6 @@
   padding: 1rem;
 
   @media only screen and (max-width: 600px) and (orientation: portrait) {
-    // background-image: url("../img/modal-mobile.webp");
     width: 75vw;
     height: 69vh;
     padding: 0.5rem;
