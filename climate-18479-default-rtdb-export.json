@@ -1,0 +1,731 @@
+{
+  "deaths": {
+    "-NVcI4o9ZTIDem_vklJK": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 15.870032,
+      "long": 100.992541,
+      "name": "Maria"
+    },
+    "-NVcICw7F3qVtbxfDe0T": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 15.870032,
+      "long": 100.992541,
+      "name": "Shorty"
+    },
+    "-NVhLKEu5pVIHDjTQVqA": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 36.778261,
+      "long": -119.4179324,
+      "name": "Stephanie "
+    },
+    "-NVkrG8eloULh_rBB-5z": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 40.7127753,
+      "long": -74.0059728,
+      "name": "Christina"
+    },
+    "-NVwKU16OKrCwrln22wA": {
+      "cause": "Drought",
+      "icon": "drought",
+      "lat": 34.0522342,
+      "long": -118.2436849,
+      "name": "cyn"
+    },
+    "-NWiVMGW4enIVEob-K20": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 51.253775,
+      "long": -85.3232139,
+      "name": "Liz"
+    },
+    "-NWz2ZaIoi2OUsgt2c1_": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 52.3474292,
+      "long": 9.747123199999999,
+      "name": "Ash"
+    },
+    "-NXdpMr5OEZhR_pNLavo": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 47.516231,
+      "long": 14.550072,
+      "name": "Kame"
+    },
+    "-NXdp_PqUjJxpchdINTI": {
+      "cause": "Drought",
+      "icon": "drought",
+      "lat": 47.516231,
+      "long": 14.550072,
+      "name": "Patrick"
+    },
+    "-NXdppEvMxUWFfFom0Bu": {
+      "cause": "Heat Wave",
+      "icon": "heatwave",
+      "lat": 47.516231,
+      "long": 14.550072,
+      "name": "Alex"
+    },
+    "d1": {
+      "cause": "Rising Sea Levels",
+      "icon": "risingSeaLevels",
+      "lat": 34.078181,
+      "long": -118.039182,
+      "name": "Kathy"
+    },
+    "d10": {
+      "cause": "Poor Air Quality",
+      "icon": "poorAirQuality",
+      "lat": 59.328928,
+      "long": 18.092837,
+      "name": "Sophia"
+    },
+    "d11": {
+      "cause": "Disease",
+      "icon": "disease",
+      "lat": 59.3095,
+      "long": 18.061792,
+      "name": "Falk"
+    },
+    "d12": {
+      "cause": "Superstorm",
+      "icon": "superstorm",
+      "lat": 59.31791,
+      "long": 18.041522,
+      "name": "Isabelle"
+    },
+    "d13": {
+      "cause": "Thawing Permafrost",
+      "icon": "thawingPermafrost",
+      "lat": 59.329223,
+      "long": 18.046244,
+      "name": "Filippa"
+    },
+    "d14": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.324954,
+      "long": 18.086127,
+      "name": "Claudia"
+    },
+    "d15": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 19.04368,
+      "long": -98.199043,
+      "name": "Maria"
+    },
+    "d16": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.315582,
+      "long": 18.092137,
+      "name": "Chris"
+    },
+    "d17": {
+      "cause": "Disease",
+      "icon": "disease",
+      "lat": 29.598694,
+      "long": -98.609471,
+      "name": "Anthony"
+    },
+    "d18": {
+      "cause": "Heat Wave",
+      "icon": "heatwave",
+      "lat": 29.553503,
+      "long": -98.447312,
+      "name": "Josh"
+    },
+    "d19": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 37.8715226,
+      "long": -122.273042,
+      "name": "Maya"
+    },
+    "d2": {
+      "cause": "Thawing Permafrost",
+      "icon": "thawingPermafrost",
+      "lat": 59.32675,
+      "long": 18.068804,
+      "name": "Greta"
+    },
+    "d20": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.330348,
+      "long": 18.05608,
+      "name": "Emilia"
+    },
+    "d21": {
+      "cause": "Rising Sea Levels",
+      "icon": "risingSeaLevels",
+      "lat": 34.1343827,
+      "long": -118.0515692,
+      "name": "Alina"
+    },
+    "d22": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 34.056283,
+      "long": -118.261265,
+      "name": "Priscilla"
+    },
+    "d23": {
+      "cause": "Superstorm",
+      "icon": "superstorm",
+      "lat": 59.51961,
+      "long": 17.92834,
+      "name": "Anna Sundström"
+    },
+    "d24": {
+      "cause": "Heat Wave",
+      "icon": "heatwave",
+      "lat": 34.034443,
+      "long": -118.251819,
+      "name": "Angela"
+    },
+    "d25": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.338775,
+      "long": 18.086896,
+      "name": "Ludvig Florin"
+    },
+    "d26": {
+      "cause": "Heat Wave",
+      "icon": "heatwave",
+      "lat": 59.312535,
+      "long": 18.026565,
+      "name": "Anna"
+    },
+    "d27": {
+      "cause": "Rising Sea Levels",
+      "icon": "risingSeaLevels",
+      "lat": 54.797889,
+      "long": 11.255648,
+      "name": "Nickie"
+    },
+    "d28": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.221462,
+      "long": 17.93644,
+      "name": "Amanda"
+    },
+    "d29": {
+      "cause": "Drought",
+      "icon": "drought",
+      "lat": 40.7127753,
+      "long": -74.0059728,
+      "name": "James"
+    },
+    "d3": {
+      "cause": "Rising Sea Levels",
+      "icon": "risingSeaLevels",
+      "lat": -27.4704528,
+      "long": 153.0260341,
+      "name": "Louis"
+    },
+    "d30": {
+      "cause": "Disease",
+      "icon": "disease",
+      "lat": 53.1434501,
+      "long": 8.214552099999999,
+      "name": "Evke"
+    },
+    "d31": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 47.516231,
+      "long": 14.550072,
+      "name": "Miri"
+    },
+    "d32": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.309481,
+      "long": 18.08316,
+      "name": "Ruby"
+    },
+    "d33": {
+      "cause": "Drought",
+      "icon": "drought",
+      "lat": 59.305257,
+      "long": 18.073636,
+      "name": "Tara"
+    },
+    "d34": {
+      "cause": "Thawing Permafrost",
+      "icon": "thawingPermafrost",
+      "lat": 62.24090479999999,
+      "long": 23.7701706,
+      "name": "Sanni"
+    },
+    "d35": {
+      "cause": "Heat Wave",
+      "icon": "heatwave",
+      "lat": 33.9310933,
+      "long": -117.5176997,
+      "name": "M2"
+    },
+    "d36": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 34.12931,
+      "long": -118.055119,
+      "name": "Sean Lee"
+    },
+    "d37": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 34.066352,
+      "long": -118.396927,
+      "name": "Camilla"
+    },
+    "d38": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.27152049999999,
+      "long": 17.9151715,
+      "name": "Magos Explorator Brandl"
+    },
+    "d39": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": -20.904305,
+      "long": 165.618042,
+      "name": "Valerie"
+    },
+    "d4": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.324919,
+      "long": 18.063492,
+      "name": "Simon"
+    },
+    "d40": {
+      "cause": "Poverty & Displacement",
+      "icon": "poverty",
+      "lat": 59.370571,
+      "long": 16.51359,
+      "name": "Felix"
+    },
+    "d41": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.308523,
+      "long": 18.097564,
+      "name": "Jakob"
+    },
+    "d42": {
+      "cause": "Thawing Permafrost",
+      "icon": "thawingPermafrost",
+      "lat": -41.075769,
+      "long": 174.872515,
+      "name": "Michelle"
+    },
+    "d43": {
+      "cause": "You saved us!",
+      "icon": "winner",
+      "lat": -41.121213,
+      "long": 174.855735,
+      "name": "Michelle C"
+    },
+    "d44": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 37.09024,
+      "long": -95.712891,
+      "name": "Margie"
+    },
+    "d45": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 43.653226,
+      "long": -79.3831843,
+      "name": "Timmy"
+    },
+    "d46": {
+      "cause": "Disease",
+      "icon": "disease",
+      "lat": -41.105629,
+      "long": 174.848506,
+      "name": "Dobby"
+    },
+    "d47": {
+      "cause": "Heat Wave",
+      "icon": "heatwave",
+      "lat": 59.60990049999999,
+      "long": 16.5448091,
+      "name": "Michaela"
+    },
+    "d48": {
+      "cause": "Poor Air Quality",
+      "icon": "poorAirQuality",
+      "lat": 45.4215296,
+      "long": -75.69719309999999,
+      "name": "Chloé "
+    },
+    "d49": {
+      "cause": "Drought",
+      "icon": "drought",
+      "lat": 64.963051,
+      "long": -19.020835,
+      "name": "Virginia Gonidelli"
+    },
+    "d5": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.323008,
+      "long": 18.096415,
+      "name": "Alde"
+    },
+    "d50": {
+      "cause": "Poor Air Quality",
+      "icon": "poorAirQuality",
+      "lat": 51.0504088,
+      "long": 13.7372621,
+      "name": "Shilan"
+    },
+    "d51": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 38.5815719,
+      "long": -121.4943996,
+      "name": "Ramon"
+    },
+    "d52": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 37.8043514,
+      "long": -122.2711639,
+      "name": "Christine"
+    },
+    "d53": {
+      "cause": "You saved us!",
+      "icon": "winner",
+      "lat": 45.421823,
+      "long": -75.689881,
+      "name": "Brenden Carruthers"
+    },
+    "d54": {
+      "cause": "Heat Wave",
+      "icon": "heatwave",
+      "lat": 34.078812,
+      "long": -118.251972,
+      "name": "Dor"
+    },
+    "d55": {
+      "cause": "Rising Sea Levels",
+      "icon": "risingSeaLevels",
+      "lat": 37.5629917,
+      "long": -122.3255254,
+      "name": "Curtis"
+    },
+    "d56": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": -41.124894,
+      "long": 174.828286,
+      "name": "Logan R"
+    },
+    "d57": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": -12.0463731,
+      "long": -77.042754,
+      "name": "Adriana"
+    },
+    "d58": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 29.5976559,
+      "long": -98.3507851,
+      "name": "Chris"
+    },
+    "d59": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 36.204824,
+      "long": 138.252924,
+      "name": "Arisa"
+    },
+    "d6": {
+      "cause": "Poor Air Quality",
+      "icon": "poorAirQuality",
+      "lat": 59.329636,
+      "long": 18.071693,
+      "name": "Idun :)"
+    },
+    "d60": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": -41.1380517,
+      "long": 174.8472141,
+      "name": "Jackie"
+    },
+    "d61": {
+      "cause": "Drought",
+      "icon": "drought",
+      "lat": 31.9685988,
+      "long": -99.9018131,
+      "name": "iElapse"
+    },
+    "d62": {
+      "cause": "Poverty & Displacement",
+      "icon": "poverty",
+      "lat": 13.794185,
+      "long": -88.89653,
+      "name": "Sky"
+    },
+    "d63": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 36.615421,
+      "long": 138.178746,
+      "name": "Yams"
+    },
+    "d64": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 35.684521,
+      "long": 139.750209,
+      "name": "Nicholas"
+    },
+    "d65": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 22.3193039,
+      "long": 114.1693611,
+      "name": "Flo"
+    },
+    "d66": {
+      "cause": "Heat Wave",
+      "icon": "heatwave",
+      "lat": 60.47202399999999,
+      "long": 8.468945999999999,
+      "name": "Law"
+    },
+    "d67": {
+      "cause": "Heat Wave",
+      "icon": "heatwave",
+      "lat": -41.2923814,
+      "long": 174.7787463,
+      "name": "Sophia"
+    },
+    "d68": {
+      "cause": "Drought",
+      "icon": "drought",
+      "lat": 39.074208,
+      "long": 21.824312,
+      "name": "Pia"
+    },
+    "d69": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 35.626291,
+      "long": 139.884356,
+      "name": "Derek"
+    },
+    "d7": {
+      "cause": "Disease",
+      "icon": "disease",
+      "lat": 59.850587,
+      "long": 17.637406,
+      "name": "Raquel"
+    },
+    "d70": {
+      "cause": "Poverty & Displacement",
+      "icon": "poverty",
+      "lat": 20.628734,
+      "long": -87.066431,
+      "name": "Ari Rosado"
+    },
+    "d71": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 20.632945,
+      "long": -87.063571,
+      "name": "Galina Mendoza"
+    },
+    "d72": {
+      "icon": "disease",
+      "lat": 20.9561149,
+      "long": -97.40633509999999,
+      "name": "Alexis González "
+    },
+    "d73": {
+      "cause": "Drought",
+      "icon": "drought",
+      "lat": 56.130366,
+      "long": -106.346771,
+      "name": "Barbara"
+    },
+    "d74": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.618377,
+      "long": 16.542151,
+      "name": "Ava Ahmad"
+    },
+    "d75": {
+      "cause": "Heat Wave",
+      "icon": "heatwave",
+      "lat": 46.8796822,
+      "long": -110.3625658,
+      "name": "Yeralin"
+    },
+    "d76": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.32656,
+      "long": 18.113661,
+      "name": "Cc"
+    },
+    "d77": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 34.067023,
+      "long": -117.645729,
+      "name": "Jaime"
+    },
+    "d78": {
+      "cause": "Poverty & Displacement",
+      "icon": "poverty",
+      "lat": 33.975192,
+      "long": -117.741586,
+      "name": "Cindy"
+    },
+    "d79": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 37.597912,
+      "long": 126.891411,
+      "name": "SeHee Jung"
+    },
+    "d8": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 59.295435,
+      "long": 18.120776,
+      "name": "Anton"
+    },
+    "d80": {
+      "cause": "Rising Sea Levels",
+      "icon": "risingSeaLevels",
+      "lat": 59.32807,
+      "long": 17.947905,
+      "name": "Alav Ahmad"
+    },
+    "d81": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 55.33017,
+      "long": 10.306244,
+      "name": "Angela"
+    },
+    "d82": {
+      "cause": "Disease",
+      "icon": "disease",
+      "lat": 57.444949,
+      "long": 10.217376,
+      "name": "Luca"
+    },
+    "d83": {
+      "cause": "Drought",
+      "icon": "drought",
+      "lat": 47.6062095,
+      "long": -122.3320708,
+      "name": "Kim"
+    },
+    "d84": {
+      "cause": "Heat Wave",
+      "icon": "heatwave",
+      "lat": 59.337672,
+      "long": 18.069596,
+      "name": "Mal"
+    },
+    "d85": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 47.3768866,
+      "long": 8.541694,
+      "name": "Claudia"
+    },
+    "d86": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 47.390434,
+      "long": 8.0457015,
+      "name": "Sarina"
+    },
+    "d87": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 34.102102,
+      "long": -118.15663,
+      "name": "Jonathan"
+    },
+    "d88": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 52.15446069999999,
+      "long": -9.5668632,
+      "name": "Maya"
+    },
+    "d89": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 52.132633,
+      "long": 5.291265999999999,
+      "name": "Yvon"
+    },
+    "d9": {
+      "cause": "Thawing Permafrost",
+      "icon": "thawingPermafrost",
+      "lat": 59.334127,
+      "long": 18.054414,
+      "name": "Eva"
+    },
+    "d90": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 42.3221194,
+      "long": -71.06242089999999,
+      "name": "Ollie"
+    },
+    "d91": {
+      "cause": "Poverty & Displacement",
+      "icon": "poverty",
+      "lat": 3.1319197,
+      "long": 101.6840589,
+      "name": "Shirley"
+    },
+    "d92": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 34.047863,
+      "long": 100.6196553,
+      "name": "Georgia"
+    },
+    "d93": {
+      "cause": "Poverty & Displacement",
+      "icon": "poverty",
+      "lat": 36.778261,
+      "long": -119.4179324,
+      "name": "Alex"
+    },
+    "d94": {
+      "cause": "Capitalism",
+      "icon": "capitalism",
+      "lat": 51.716249,
+      "long": -0.456157,
+      "name": "Ethan"
+    }
+  }
+}

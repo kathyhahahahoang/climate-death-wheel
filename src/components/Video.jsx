@@ -71,6 +71,10 @@ const Video = () => {
           (Sorry if your results weren't 100% accurate. The wheel was handmade
           so it's not a perfect circle!)
         </p>
+        <p className={styles.unfortunate}>
+          Unfortunately the location field of the form is no longer working.
+          Sorry!
+        </p>
         <form className={styles["form-container"]} onSubmit={submitHandler}>
           <div className={styles["label-container"]}>
             <label className={styles.label} htmlFor="name">
