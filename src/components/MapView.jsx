@@ -10,8 +10,8 @@ const MapView = () => {
   const { submitForm } = useContext(InfoContext);
 
   useEffect(() => {
-    try {
-      const fetchDeaths = async () => {
+    const fetchDeaths = async () => {
+      try {
         const response = await fetch(
           "https://climate-18479-default-rtdb.firebaseio.com/deaths.json"
         );
@@ -30,12 +30,11 @@ const MapView = () => {
           });
         }
         setDeaths(loadedDeaths);
-      };
-
-      fetchDeaths();
-    } catch (error) {
-      console.log("Could not fetch data");
-    }
+      } catch (error) {
+        console.log("Could not fetch data");
+      }
+    };
+    fetchDeaths();
   }, [submitForm]);
 
   return (
@@ -46,19 +45,19 @@ const MapView = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         />
 
-        {deaths.map((person) => {
-          const iconProps = Object.hasOwn(Icons, person.icon) && {
-            icon: Icons[person.icon],
+        {deaths.map((death) => {
+          const iconProps = Object.hasOwn(Icons, death.icon) && {
+            icon: Icons[death.icon],
           };
           return (
             <Marker
-              position={[person.lat, person.long]}
-              key={person.id}
+              position={[death.lat, death.long]}
+              key={death.id}
               {...iconProps}
             >
               <Popup className={styles.popup}>
-                <p>Name: {person.name}</p>
-                <p>Death by: {person.cause}</p>
+                <p>Name: {death.name}</p>
+                <p>Death by: {death.cause}</p>
               </Popup>
             </Marker>
           );
