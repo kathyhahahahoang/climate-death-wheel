@@ -7,8 +7,17 @@ import permafrostImg from "../img/permafrost.webp";
 import poorAirQualityImg from "../img/poorAirQuality.webp";
 import risingSeaLevelsImg from "../img/risingSeaLevels.webp";
 import superstormImg from "../img/superstorm.webp";
+import winnerImg from "../img/winner.webp";
 
-export const poverty = {
+export type InfoObject = {
+  title: string;
+  text: string;
+  longText?: string;
+  image: string;
+  icon: string;
+};
+
+export const poverty: InfoObject = {
   title: "Poverty & Displacement",
   text: "Climate change increases the factors that put and keep people in poverty. Floods may sweep away urban slums, destroying homes and livelihoods. Heat can make it difficult to work in outdoor jobs. Water scarcity may affect crops. Over the past decade, weather-related events displaced an estimated 23.1 million people on average each year, leaving many more vulnerable to poverty. Most refugees come from countries that are most vulnerable and least ready to adapt to the impacts of climate change.",
   longText:
@@ -16,7 +25,7 @@ export const poverty = {
   image: povertyImg,
   icon: "poverty",
 };
-export const capitalism = {
+export const capitalism: InfoObject = {
   title: "Capitalism",
   text: "The world’s richest people emit huge and unsustainable amounts of carbon and, unlike ordinary people, 50-70% of their emissions result from their investments. 125 of the world’s richest billionaires show that on average they emit 3 million tonnes a year, more than a million times the average for someone in the bottom 90% of humanity. Billionaires hold extensive stakes in many of the world’s largest and most powerful corporations, which gives them the power to influence the way these companies act. The role of the super-rich in super-charging climate change is rarely discussed.",
   longText:
@@ -24,7 +33,7 @@ export const capitalism = {
   image: capitalismImg,
   icon: "capitalism",
 };
-export const drought = {
+export const drought: InfoObject = {
   title: "Drought",
   text: "Climate change is changing water availability, making it scarcer in more regions. Global warming exacerbates water shortages in already water-stressed regions and is leading to an increased risk of agricultural droughts affecting crops, and ecological droughts increasing the vulnerability of ecosystems. Droughts can also stir destructive sand and dust storms that can move billions of tons of sand across continents. Deserts are expanding, reducing land for growing food. Many people now face the threat of not having enough water on a regular basis.",
   longText:
@@ -33,7 +42,7 @@ export const drought = {
   icon: "drought",
 };
 
-export const poorAirQuality = {
+export const poorAirQuality: InfoObject = {
   title: "Poor Air Quality",
   text: "Climate change affects human health by making our air less healthy to breathe. Higher temperatures lead to an increase in allergies and harmful air pollutants. For instance, longer warm seasons can mean longer pollen seasons – which can increase allergic sensitization and asthma episodes. When sensitive individuals are simultaneously exposed to allergens and air pollutants, allergic reactions often become more severe. People with existing pollen allergies may have increased risk for acute respiratory effects.",
   longText:
@@ -41,7 +50,7 @@ export const poorAirQuality = {
   image: poorAirQualityImg,
   icon: "poorAirQuality",
 };
-export const permafrost = {
+export const permafrost: InfoObject = {
   title: "Thawing Permafrost",
   text: "As Earth’s climate warms, the permafrost thaws. The ice inside the permafrost melts, leaving behind water and soil. Thawing permafrost can have dramatic impacts on our planet. It can destroy houses, roads and other infrastructure. When permafrost is frozen, plant material in the soil—called organic carbon—can’t decompose. As permafrost thaws, microbes begin decomposing this material. This process releases greenhouse gasses to the atmosphere. When permafrost thaws, so do ancient bacteria and viruses in the ice and soil. These newly-unfrozen microbes could make humans and animals very sick.",
   longText:
@@ -49,7 +58,7 @@ export const permafrost = {
   image: permafrostImg,
   icon: "thawingPermafrost",
 };
-export const heatwave = {
+export const heatwave: InfoObject = {
   title: "Heat Wave",
   text: "As greenhouse gas concentrations rise, so does the global surface temperature. The last decade, 2011-2020, is the warmest on record. Since the 1980s, each decade has been warmer than the previous one. Nearly all land areas are seeing more hot days and heat waves. Higher temperatures increase heat-related illnesses and make working outdoors more difficult. Wildfires start more easily and spread more rapidly when conditions are hotter. Temperatures in the Arctic have warmed at least twice as fast as the global average.",
   longText:
@@ -57,7 +66,7 @@ export const heatwave = {
   image: heatwaveImg,
   icon: "heatwave",
 };
-export const disease = {
+export const disease: InfoObject = {
   title: "Disease",
   text: "Climate change is the single biggest health threat facing humanity, and health professionals worldwide are already responding to the health harms caused by this unfolding crisis. Climate change does not cause diseases, but it affects the way they spread and undermines the work to combat them. Although climate change impacts health in all countries, people in low and middle-income countries, who are already struggling with other health, economic, and environmental challenges, are being hit the hardest.",
   longText:
@@ -65,7 +74,7 @@ export const disease = {
   image: diseaseImg,
   icon: "disease",
 };
-export const superstorm = {
+export const superstorm: InfoObject = {
   title: "Superstorm",
   text: "Destructive storms have become more intense and more frequent in many regions. As temperatures rise, more moisture evaporates, which exacerbates extreme rainfall and flooding, causing more destructive storms. The frequency and extent of tropical storms is also affected by the warming ocean. Cyclones, hurricanes, and typhoons feed on warm waters at the ocean surface. Such storms often destroy homes and communities, causing deaths and huge economic losses.",
   longText:
@@ -73,11 +82,17 @@ export const superstorm = {
   image: superstormImg,
   icon: "superstorm",
 };
-export const risingSeaLevels = {
+export const risingSeaLevels: InfoObject = {
   title: "Rising Sea Levels",
   text: "The ocean soaks up most of the heat from global warming. The rate at which the ocean is warming strongly increased over the past two decades, across all depths of the ocean. As the ocean warms, its volume increases since water expands as it gets warmer. Melting ice sheets also cause sea levels to rise, threatening coastal and island communities. Damage to and loss of coastal areas would jeopardize the economic and ecological amenities provided by coastal wetlands and marshes, including flood control, critical ecological habitat, and water purification.",
   longText:
     "The ocean soaks up most of the heat from global warming. The rate at which the ocean is warming strongly increased over the past two decades, across all depths of the ocean. As the ocean warms, its volume increases since water expands as it gets warmer. Melting ice sheets also cause sea levels to rise, threatening coastal and island communities. The major physical impacts of a rise in sea level include erosion of beaches, inundation of deltas as well as flooding and loss of many marshes and wetlands. Damage to and loss of coastal areas would jeopardize the economic and ecological amenities provided by coastal wetlands and marshes, including flood control, critical ecological habitat, and water purification.\n\nThe warming of the ocean causes a number of alarming problems. It provides more energy to tropical cyclones, which are getting stronger and intensifying faster. As more water evaporates from warmer oceans, the rate of global rainfall increases. This adds to heavy rainfall events that can cause flooding rather than alleviating droughts. Warming also tends to diminish the oceans’ ability to act as a sink for carbon dioxide. Ocean warming also has a detrimental effect on marine biology, causing calamities such as coral bleaching.",
   image: risingSeaLevelsImg,
   icon: "risingSeaLevels",
+};
+export const winner = {
+  title: "You saved us!",
+  text: "Congratulations! World leaders have finally decided to hold corporations responsible for the damage they've done to the planet. We survived!",
+  image: winnerImg,
+  icon: "winner",
 };

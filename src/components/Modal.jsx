@@ -3,10 +3,11 @@ import { useContext } from "react";
 import modal from "../img/modal.webp";
 import modalSmall from "../img/modal-mobile.webp";
 
-import InfoContext from "../store/info-context";
+import InfoContext, { useInfoContext } from "../store/info-context.tsx";
 
 const Modal = (props) => {
-  const { title, text, image } = useContext(InfoContext);
+  // const { title, text, image } = useContext(InfoContext);
+  const { title, text, image } = useInfoContext();
 
   return (
     <div>

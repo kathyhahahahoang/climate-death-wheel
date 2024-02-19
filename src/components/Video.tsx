@@ -1,8 +1,8 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import styles from "./Video.module.scss";
 import video from "../img/video.mp4";
 import kathy from "../img/kathy.webp";
-import InfoContext from "../store/info-context";
+import { useInfoContext } from "../store/info-context.tsx";
 
 import PlacesAutocomplete, {
   geocodeByAddress,
@@ -10,7 +10,7 @@ import PlacesAutocomplete, {
 } from "react-places-autocomplete";
 
 const Video = () => {
-  const { title, setSubmitForm, icon } = useContext(InfoContext);
+  const { title, setSubmitForm, icon } = useInfoContext();
   const [enteredName, setEnteredName] = useState("");
   const [address, setAddress] = useState("");
   const [latitude, setLatitude] = useState();
@@ -70,10 +70,6 @@ const Video = () => {
         <p className={styles.sorry}>
           (Sorry if your results weren't 100% accurate. The wheel was handmade
           so it's not a perfect circle!)
-        </p>
-        <p className={styles.unfortunate}>
-          Unfortunately the location field of the form is no longer working.
-          Sorry!
         </p>
         <form className={styles["form-container"]} onSubmit={submitHandler}>
           <div className={styles["label-container"]}>

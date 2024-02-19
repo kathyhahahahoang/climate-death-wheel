@@ -4,9 +4,9 @@ import wheel from "../img/wheel.webp";
 import wheelMobile from "../img/wheel-mobile.webp";
 import styles from "./Wheel.module.scss";
 import Modal from "./Modal";
-import { wheelOptions } from "../constants/WheelOptions";
+import { wheelOptions } from "../constants/WheelOptions.tsx";
 import { useState, useContext, useEffect } from "react";
-import InfoContext from "../store/info-context";
+import InfoContext, { useInfoContext } from "../store/info-context.tsx";
 
 const Wheel = ({ resultRef }) => {
   const {
@@ -21,7 +21,7 @@ const Wheel = ({ resultRef }) => {
     setOpenModal,
     setShowTiles,
     setShowLarge,
-  } = useContext(InfoContext);
+  } = useInfoContext();
 
   const [spin, setSpin] = useState(false);
   const [buttonDisable, setButtonDisable] = useState(false);

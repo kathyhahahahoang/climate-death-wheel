@@ -1,4 +1,3 @@
-import winnerImg from "../img/winner.webp";
 import {
   poverty,
   capitalism,
@@ -9,9 +8,15 @@ import {
   poorAirQuality,
   risingSeaLevels,
   superstorm,
-} from "./WheelInfo";
+  winner,
+  InfoObject,
+} from "./WheelInfo.tsx";
 
-export const wheelOptions = [
+type WheelArray = InfoObject & {
+  index: number;
+};
+
+export const wheelOptions: WheelArray[] = [
   {
     index: 1,
     ...poverty,
@@ -174,10 +179,7 @@ export const wheelOptions = [
   },
   {
     index: 41,
-    title: "You saved us!",
-    text: "Congratulations! World leaders have finally decided to hold corporations responsible for the damage they've done to the planet. We survived!",
-    image: winnerImg,
-    icon: "winner",
+    ...winner,
   },
   {
     index: 42,
@@ -208,5 +210,3 @@ export const wheelOptions = [
     ...capitalism,
   },
 ];
-
-export default { wheelOptions };

@@ -1,13 +1,13 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import InfoContext from "../store/info-context";
+import { useInfoContext } from "../store/info-context.tsx";
 import Icons from "../constants/Icons";
 import styles from "./MapView.module.scss";
 
 const MapView = () => {
   const [deaths, setDeaths] = useState([]);
 
-  const { submitForm } = useContext(InfoContext);
+  const { submitForm } = useInfoContext();
 
   useEffect(() => {
     const fetchDeaths = async () => {

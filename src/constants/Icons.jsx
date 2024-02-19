@@ -9,7 +9,6 @@ const Icons = {
     className: "disease",
     iconSize: [24, 40],
     iconAnchor: [12, 40],
-
     name: "disease",
   }),
   capitalism: L.divIcon({

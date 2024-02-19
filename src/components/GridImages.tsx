@@ -8,11 +8,11 @@ import permafrost from "../img/permafrost-icon.webp";
 import poorAirQuality from "../img/poorAirQuality-icon.webp";
 import risingSeaLevels from "../img/risingSeaLevels-icon.webp";
 import superstorm from "../img/superstorm-icon.webp";
-import WheelOptions from "../constants/WheelOptions";
-import InfoContext from "../store/info-context";
-import { useState, useContext, useEffect } from "react";
+import { wheelOptions } from "../constants/WheelOptions.tsx";
+import { useInfoContext } from "../store/info-context.tsx";
+import React, { useState, useEffect } from "react";
 
-const GridImages = (props) => {
+const GridImages = () => {
   const {
     title,
     longText,
@@ -23,11 +23,11 @@ const GridImages = (props) => {
     setShowTiles,
     showLarge,
     setShowLarge,
-  } = useContext(InfoContext);
+  } = useInfoContext();
 
-  const [imageId, setImageId] = useState();
-  const [header, setHeader] = useState("");
-  const [description, setDescription] = useState("");
+  const [imageId, setImageId] = useState<string | undefined>();
+  const [header, setHeader] = useState<string | undefined>("");
+  const [description, setDescription] = useState<string | undefined>("");
 
   useEffect(() => {
     setImageId(image);
@@ -39,9 +39,9 @@ const GridImages = (props) => {
     setShowLarge(!showLarge);
     setShowTiles(!showTiles);
     const id = event.target.id;
-    const image = WheelOptions.wheelOptions[id].image;
-    const header = WheelOptions.wheelOptions[id].title;
-    const text = WheelOptions.wheelOptions[id].longText;
+    const image = wheelOptions[id].image;
+    const header = wheelOptions[id].title;
+    const text = wheelOptions[id].longText;
     setImageId(image);
     setHeader(header);
     setDescription(text);
