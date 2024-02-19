@@ -1,6 +1,5 @@
 import Wheel from "./components/Wheel";
-import Background from "./components/Background";
-import Quote1 from "./components/Quote1";
+import Quote from "./components/Quote.jsx";
 import GridImages from "./components/GridImages.tsx";
 import Video from "./components/Video.tsx";
 import MapView from "./components/MapView.tsx";
@@ -15,10 +14,9 @@ function App() {
 
   return (
     <InfoContextProvider>
-      <div className={styles.app}>
-        <Background />
+      <div className={styles.background}>
         <Wheel resultRef={resultRef} />
-        <Quote1 ref={resultRef} />
+        <Quote ref={resultRef} />
         <GridImages />
         <Video />
         <MapView />

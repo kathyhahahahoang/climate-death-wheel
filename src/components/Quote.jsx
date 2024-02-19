@@ -1,7 +1,7 @@
-import styles from "./Quote1.module.scss";
+import styles from "./Quote.module.scss";
 import { forwardRef } from "react";
 
-const Quote1 = forwardRef((props, ref) => {
+const Quote = forwardRef((_, ref) => {
   return (
     <p className={styles.quote} ref={ref}>
       It is unequivocal that human influence has warmed the atmosphere, ocean,
@@ -10,4 +10,4 @@ const Quote1 = forwardRef((props, ref) => {
   );
 });
 
-export default Quote1;
+export default Quote;
