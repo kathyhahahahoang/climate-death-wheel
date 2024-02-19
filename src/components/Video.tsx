@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./Video.module.scss";
 import video from "../img/video.mp4";
 import kathy from "../img/kathy.webp";
@@ -11,16 +11,16 @@ import PlacesAutocomplete, {
 
 const Video = () => {
   const { title, setSubmitForm, icon } = useInfoContext();
-  const [enteredName, setEnteredName] = useState("");
-  const [address, setAddress] = useState("");
-  const [latitude, setLatitude] = useState();
-  const [longitude, setLongitude] = useState();
-  const [submitMessage, setSubmitMessage] = useState("");
+
+  const [enteredName, setEnteredName] = useState<string>("");
+  const [address, setAddress] = useState<string>("");
+  const [latitude, setLatitude] = useState<{ lat: number }>();
+  const [longitude, setLongitude] = useState<{ lng: number }>();
+  const [submitMessage, setSubmitMessage] = useState<boolean>(false);
 
   const handleSelect = async (value) => {
     const results = await geocodeByAddress(value);
     const coords = await getLatLng(results[0]);
-    console.log(coords);
     setAddress(value);
     setLatitude(coords.lat);
     setLongitude(coords.lng);
@@ -28,7 +28,6 @@ const Video = () => {
 
   const nameChangeHandler = (e) => {
     setEnteredName(e.target.value);
-    console.log(enteredName);
   };
 
   const submitHandler = (e) => {
@@ -61,16 +60,16 @@ const Video = () => {
         <video
           className={styles.video}
           src={video}
-          controls="controls"
+          controls={true}
           autoPlay={true}
         />
       </div>
       <div className={styles["right-container"]}>
         <p className={styles.heading}>And add your result to the map below!</p>
-        <p className={styles.sorry}>
+        {/* <p className={styles.sorry}>
           (Sorry if your results weren't 100% accurate. The wheel was handmade
           so it's not a perfect circle!)
-        </p>
+        </p> */}
         <form className={styles["form-container"]} onSubmit={submitHandler}>
           <div className={styles["label-container"]}>
             <label className={styles.label} htmlFor="name">
@@ -79,7 +78,6 @@ const Video = () => {
             <input
               type="text"
               id="name"
-              // placeholder="Anonymous"
               value={enteredName}
               onChange={nameChangeHandler}
               className={styles.input}
@@ -107,17 +105,15 @@ const Video = () => {
                     id="location"
                     value={address}
                     required
-                    {...getInputProps({
-                      // placeholder: "Search Places ...",
-                    })}
+                    {...getInputProps({})}
                   />
-                  <div className="autocomplete-dropdown-container">
+                  <div>
                     {loading && <div>Loading...</div>}
                     {suggestions.map((suggestion) => {
                       const className = suggestion.active
                         ? "suggestion-item--active"
                         : "suggestion-item";
-                      // inline style for demonstration purpose
+
                       const style = suggestion.active
                         ? {
                             backgroundColor: "#fafafa",
@@ -131,6 +127,7 @@ const Video = () => {
                             fontSize: "1.4rem",
                             paddingLeft: ".4rem",
                           };
+
                       return (
                         <div
                           {...getSuggestionItemProps(suggestion, {
@@ -184,3 +181,5 @@ const Video = () => {
 };
 
 export default Video;
+
+// className="autocomplete-dropdown-container"

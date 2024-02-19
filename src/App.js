@@ -14,7 +14,7 @@ function App() {
 
   return (
     <InfoContextProvider>
-      <div className={styles.background}>
+      <div className={`${styles.background} ${styles.app}`}>
         <Wheel resultRef={resultRef} />
         <Quote ref={resultRef} />
         <GridImages />

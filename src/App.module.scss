@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-family: "kathyregular";
 }
 
 @font-face {
@@ -10,6 +9,10 @@
   src: url("fonts/kathy-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+}
+
+.app {
+  font-family: "kathyregular";
 }
 
 .background {

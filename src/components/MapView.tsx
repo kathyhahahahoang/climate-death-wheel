@@ -1,23 +1,32 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useInfoContext } from "../store/info-context.tsx";
 import Icons from "../constants/Icons";
 import styles from "./MapView.module.scss";
 
+type Death = {
+  id: string;
+  name: string;
+  lat: number;
+  long: number;
+  cause: string;
+  icon: string;
+};
+
 const MapView = () => {
-  const [deaths, setDeaths] = useState([]);
+  const [deaths, setDeaths] = useState<Death[]>([]);
 
   const { submitForm } = useInfoContext();
 
   useEffect(() => {
+    const loadedDeaths: Death[] = [];
+
     const fetchDeaths = async () => {
       try {
         const response = await fetch(
           "https://climate-18479-default-rtdb.firebaseio.com/deaths.json"
         );
         const responseData = await response.json();
-
-        const loadedDeaths = [];
 
         for (const key in responseData) {
           loadedDeaths.push({
