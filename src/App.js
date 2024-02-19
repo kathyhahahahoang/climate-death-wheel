@@ -51,7 +51,6 @@ function App() {
         <Background />
         <Wheel resultRef={resultRef} />
         <Quote1 ref={resultRef} />
-        {/* <Grid /> */}
         <GridImages />
         <Video />
         <MapView />
