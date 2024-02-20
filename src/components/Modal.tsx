@@ -1,6 +1,5 @@
 import styles from "./Modal.module.scss";
 import modal from "../img/modal.webp";
-import modalSmall from "../img/modal-mobile.webp";
 import { useInfoContext } from "../store/info-context.tsx";
 import React from "react";
 
@@ -16,19 +15,12 @@ const Modal = ({ onModalHandler, onReadMore }: ModalProps) => {
     <div>
       <div className={styles.overlay} onClick={onModalHandler}></div>
 
-      <div className={styles.container}>
-        <picture>
-          <source media="(orientation: portrait)" srcSet={modalSmall} />
-          <source media="(orientation: landscape)" srcSet={modal} />
-
-          <img
-            className={styles.background}
-            src={modal}
-            alt="Cardboard background"
-          />
-        </picture>
+      <div
+        className={styles.container}
+        style={{ backgroundImage: `url(${modal})` }}
+      >
         <div className={styles.close} onClick={onModalHandler}>
-          x
+          <span>x</span>
         </div>
         <div
           className={styles["left-container"]}
