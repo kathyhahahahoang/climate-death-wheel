@@ -1,12 +1,12 @@
+import styles from "./Wheel.module.scss";
+import Modal from "./Modal.tsx";
 import questionLandsape from "../img/question-landscape.PNG";
 import questionPortrait from "../img/question-portrait.PNG";
 import wheel from "../img/wheel.webp";
 import wheelMobile from "../img/wheel-mobile.webp";
-import styles from "./Wheel.module.scss";
-import Modal from "./Modal";
 import { wheelOptions } from "../constants/WheelOptions.tsx";
-import { useState, useContext, useEffect } from "react";
-import InfoContext, { useInfoContext } from "../store/info-context.tsx";
+import React, { useState, useEffect } from "react";
+import { useInfoContext } from "../store/info-context.tsx";
 
 const Wheel = ({ resultRef }) => {
   const {
@@ -93,27 +93,16 @@ const Wheel = ({ resultRef }) => {
     <div className={styles.background}>
       <div className={styles.container}>
         {showModal && (
-          <Modal
-            onModalHandler={modalHandler}
-            title={title}
-            text={text}
-            image={image}
-            onReadMore={readMoreHandler}
-          />
+          <Modal onModalHandler={modalHandler} onReadMore={readMoreHandler} />
         )}
         <picture className={styles["question-container"]}>
           <source
             className={styles.question}
             media="(orientation: portrait)"
             srcSet={questionPortrait}
-            alt="What will be your cause of death text"
           />
 
-          <source
-            className={styles.question}
-            srcSet={questionLandsape}
-            alt="What will be your cause of death text"
-          />
+          <source className={styles.question} srcSet={questionLandsape} />
           <img
             className={styles.question}
             src={questionLandsape}
@@ -125,13 +114,11 @@ const Wheel = ({ resultRef }) => {
             className={styles.wheel}
             media="(orientation: portrait)"
             srcSet={wheelMobile}
-            alt="roulette wheel"
           />
           <source
             className={styles.wheel}
             media="(orientation: landscape)"
             srcSet={wheel}
-            alt="roulette wheel"
           />
           <img
             className={styles.wheel}

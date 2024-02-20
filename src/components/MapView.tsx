@@ -4,7 +4,7 @@ import { useInfoContext } from "../store/info-context.tsx";
 import Icons from "../constants/Icons";
 import styles from "./MapView.module.scss";
 
-type Death = {
+type DeathObject = {
   id: string;
   name: string;
   lat: number;
@@ -14,12 +14,12 @@ type Death = {
 };
 
 const MapView = () => {
-  const [deaths, setDeaths] = useState<Death[]>([]);
+  const [deaths, setDeaths] = useState<DeathObject[]>([]);
 
   const { submitForm } = useInfoContext();
 
   useEffect(() => {
-    const loadedDeaths: Death[] = [];
+    const loadedDeaths: DeathObject[] = [];
 
     const fetchDeaths = async () => {
       try {

@@ -1,4 +1,4 @@
-import Wheel from "./components/Wheel";
+import Wheel from "./components/Wheel.tsx";
 import Quote from "./components/Quote.jsx";
 import GridImages from "./components/GridImages.tsx";
 import Video from "./components/Video.tsx";
