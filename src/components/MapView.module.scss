@@ -1,21 +1,17 @@
 .map {
-  background-color: blanchedalmond;
   width: calc(100% - 20rem);
   height: 75vh;
   margin: 8rem auto;
-  // @media only screen and (max-width: 600px) and (orientation: portrait) {
-  //   padding-bottom: 1.8rem;
-  // }
 
-  // @media (min-width: 768px) {
-  //   padding-bottom: 2rem;
-  // }
+  @media (max-width: 1800px) {
+    width: calc(100% - 10rem);
+  }
 
-  // @media (min-width: 1024px) and (orientation: portrait) {
-  //   padding-bottom: 3rem;
-  // }
+  @media (max-width: 1400px) {
+    width: calc(100% - 4rem);
+  }
 
-  // @media (min-width: 1024px) and (orientation: landscape) {
-  //   padding-bottom: 4rem;
-  // }
+  @media (max-width: 800px) {
+    margin: 4rem auto;
+  }
 }
