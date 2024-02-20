@@ -1,181 +1,184 @@
 .container {
-  width: calc(100% - 16rem);
-  margin: 0 auto;
+  width: calc(100% - 20rem);
+  margin: 8rem auto;
   display: flex;
-  justify-content: space-between;
+  gap: 4rem;
+  background-color: aqua;
 
-  @media only screen and (max-width: 600px) and (orientation: portrait) {
-    width: calc(100% - 2rem);
-    flex-direction: column;
-    padding-bottom: 1.4rem;
-  }
+  // @media only screen and (max-width: 600px) and (orientation: portrait) {
+  //   width: calc(100% - 2rem);
+  //   flex-direction: column;
+  //   padding-bottom: 1.4rem;
+  // }
 
-  @media (min-width: 601px) {
-    flex-direction: column;
-    width: calc(100% - 6rem);
-  }
+  // @media (min-width: 601px) {
+  //   flex-direction: column;
+  //   width: calc(100% - 6rem);
+  // }
 
-  @media (min-width: 768px) {
-    width: calc(100% - 10rem);
-    padding-bottom: 2rem;
-  }
+  // @media (min-width: 768px) {
+  //   width: calc(100% - 10rem);
+  //   padding-bottom: 2rem;
+  // }
 
-  @media (min-width: 1024px) and (orientation: portrait) {
-    width: calc(100% - 16rem);
-    padding-bottom: 3rem;
-  }
+  // @media (min-width: 1024px) and (orientation: portrait) {
+  //   width: calc(100% - 16rem);
+  //   padding-bottom: 3rem;
+  // }
 
-  @media (min-width: 1024px) and (orientation: landscape) {
-    width: calc(100% - 8rem);
-    flex-direction: initial;
-    padding-bottom: 4rem;
-  }
+  // @media (min-width: 1024px) and (orientation: landscape) {
+  //   width: calc(100% - 8rem);
+  //   flex-direction: initial;
+  //   padding-bottom: 4rem;
+  // }
 
-  @media (min-width: 1366px) and (orientation: landscape) {
-    width: calc(100% - 18rem);
-  }
+  // @media (min-width: 1366px) and (orientation: landscape) {
+  //   width: calc(100% - 18rem);
+  // }
 
-  @media (min-width: 1550px) {
-    width: calc(100% - 28rem);
-  }
+  // @media (min-width: 1550px) {
+  //   width: calc(100% - 28rem);
+  // }
 }
 
 .left-container {
-  width: 60%;
+  width: 50%;
+  // background-color: aliceblue;
 
-  @media only screen and (max-width: 600px) and (orientation: portrait) {
-    width: 100%;
-  }
+  // @media only screen and (max-width: 600px) and (orientation: portrait) {
+  //   width: 100%;
+  // }
 
-  @media (min-width: 601px) {
-    width: 100%;
-    text-align: center;
-  }
+  // @media (min-width: 601px) {
+  //   width: 100%;
+  //   text-align: center;
+  // }
 
-  @media (min-width: 1024px) and (orientation: landscape) {
-    width: 60%;
-    margin-right: 1.4rem;
-  }
+  // @media (min-width: 1024px) and (orientation: landscape) {
+  //   width: 60%;
+  //   margin-right: 1.4rem;
+  // }
 }
 
 .img {
-  max-height: 480px;
+  height: 30rem;
   margin-right: 2rem;
 
-  @media only screen and (max-width: 600px) and (orientation: portrait) {
-    display: none;
-  }
+  // @media only screen and (max-width: 600px) and (orientation: portrait) {
+  //   display: none;
+  // }
 
-  @media (min-width: 601px) {
-    max-height: 365px;
-    margin-right: 1rem;
-  }
+  // @media (min-width: 601px) {
+  //   max-height: 365px;
+  //   margin-right: 1rem;
+  // }
 
-  @media (min-width: 662px) {
-    max-height: 370px;
-    margin-right: 1rem;
-  }
+  // @media (min-width: 662px) {
+  //   max-height: 370px;
+  //   margin-right: 1rem;
+  // }
 
-  @media (min-width: 700px) {
-    max-height: 420px;
-    margin-right: 1rem;
-  }
+  // @media (min-width: 700px) {
+  //   max-height: 420px;
+  //   margin-right: 1rem;
+  // }
 
-  @media (min-width: 768px) and (orientation: portrait) {
-    max-height: 450px;
-    margin-right: 1rem;
-  }
+  // @media (min-width: 768px) and (orientation: portrait) {
+  //   max-height: 450px;
+  //   margin-right: 1rem;
+  // }
 
-  @media (min-width: 1024px) and (orientation: portrait) {
-    max-height: 480px;
-  }
+  // @media (min-width: 1024px) and (orientation: portrait) {
+  //   max-height: 480px;
+  // }
 
-  @media (min-width: 1050px) {
-    max-height: 390px;
-    margin-right: 1rem;
-  }
+  // @media (min-width: 1050px) {
+  //   max-height: 390px;
+  //   margin-right: 1rem;
+  // }
 
-  @media (min-width: 1024px) and (orientation: landscape) {
-    max-height: 340px;
-    margin-right: 1rem;
-    margin-top: 1rem;
-  }
+  // @media (min-width: 1024px) and (orientation: landscape) {
+  //   max-height: 340px;
+  //   margin-right: 1rem;
+  //   margin-top: 1rem;
+  // }
 
-  @media (min-width: 1366px) and (orientation: landscape) {
-    max-height: 410px;
-    margin-right: 1rem;
-    margin-top: 0;
-  }
+  // @media (min-width: 1366px) and (orientation: landscape) {
+  //   max-height: 410px;
+  //   margin-right: 1rem;
+  //   margin-top: 0;
+  // }
 
-  @media (min-width: 1440px) {
-    max-height: 450px;
-  }
+  // @media (min-width: 1440px) {
+  //   max-height: 450px;
+  // }
 
-  @media (min-width: 1550px) {
-    max-height: 420px;
-  }
+  // @media (min-width: 1550px) {
+  //   max-height: 420px;
+  // }
 }
 
 .video {
   width: auto;
-  max-height: 480px;
+  height: 30rem;
+  float: right;
 
-  @media only screen and (max-width: 600px) and (orientation: portrait) {
-    display: block;
-    margin: 0 auto;
-    max-height: 480px;
-    width: auto;
-  }
+  // @media only screen and (max-width: 600px) and (orientation: portrait) {
+  //   display: block;
+  //   margin: 0 auto;
+  //   max-height: 480px;
+  //   width: auto;
+  // }
 
-  @media (min-width: 601px) {
-    max-height: 365px;
-    width: auto;
-  }
+  // @media (min-width: 601px) {
+  //   max-height: 365px;
+  //   width: auto;
+  // }
 
-  @media (min-width: 662px) {
-    max-height: 370px;
-    width: auto;
-  }
+  // @media (min-width: 662px) {
+  //   max-height: 370px;
+  //   width: auto;
+  // }
 
-  @media (min-width: 700px) {
-    max-height: 420px;
-    width: auto;
-  }
+  // @media (min-width: 700px) {
+  //   max-height: 420px;
+  //   width: auto;
+  // }
 
-  @media (min-width: 768px) and (orientation: portrait) {
-    max-height: 450px;
-    width: auto;
-  }
+  // @media (min-width: 768px) and (orientation: portrait) {
+  //   max-height: 450px;
+  //   width: auto;
+  // }
 
-  @media (min-width: 1024px) and (orientation: portrait) {
-    max-height: 480px;
-    width: auto;
-  }
+  // @media (min-width: 1024px) and (orientation: portrait) {
+  //   max-height: 480px;
+  //   width: auto;
+  // }
 
-  @media (min-width: 1050px) {
-    max-height: 390px;
-    width: auto;
-  }
+  // @media (min-width: 1050px) {
+  //   max-height: 390px;
+  //   width: auto;
+  // }
 
-  @media (min-width: 1024px) and (orientation: landscape) {
-    max-height: 340px;
-    width: auto;
-  }
+  // @media (min-width: 1024px) and (orientation: landscape) {
+  //   max-height: 340px;
+  //   width: auto;
+  // }
 
-  @media (min-width: 1366px) and (orientation: landscape) {
-    max-height: 410px;
-    width: auto;
-  }
+  // @media (min-width: 1366px) and (orientation: landscape) {
+  //   max-height: 410px;
+  //   width: auto;
+  // }
 
-  @media (min-width: 1440px) {
-    max-height: 450px;
-    width: auto;
-  }
+  // @media (min-width: 1440px) {
+  //   max-height: 450px;
+  //   width: auto;
+  // }
 
-  @media (min-width: 1550px) {
-    max-height: 420px;
-    width: auto;
-  }
+  // @media (min-width: 1550px) {
+  //   max-height: 420px;
+  //   width: auto;
+  // }
 }
 
 .text {
@@ -205,25 +208,26 @@
 }
 
 .right-container {
-  width: 40%;
-  margin: auto 0;
+  width: 50%;
+  // margin: auto 0;
+  // background-color: whitesmoke;
 
-  @media only screen and (max-width: 600px) and (orientation: portrait) {
-    width: 100%;
-  }
+  // @media only screen and (max-width: 600px) and (orientation: portrait) {
+  //   width: 100%;
+  // }
 
-  @media (min-width: 601px) {
-    margin: 0 auto;
-    width: 100%;
-  }
+  // @media (min-width: 601px) {
+  //   margin: 0 auto;
+  //   width: 100%;
+  // }
 
-  @media (min-width: 1024px) and (orientation: landscape) {
-    width: 50%;
-  }
+  // @media (min-width: 1024px) and (orientation: landscape) {
+  //   width: 50%;
+  // }
 
-  @media (min-width: 1366px) and (orientation: landscape) {
-    margin-top: 0.8rem;
-  }
+  // @media (min-width: 1366px) and (orientation: landscape) {
+  //   margin-top: 0.8rem;
+  // }
 }
 
 .heading {
@@ -254,21 +258,30 @@
   }
 }
 
-.sorry {
-  font-size: 1.4rem;
-  text-align: center;
-  text-shadow: 0 0.5px 0.5px rgba(0, 0, 0);
-
-  @media (min-width: 601px) and (orientation: portrait) {
-    text-shadow: none;
-    font-size: 1.4rem;
-  }
+.form-container {
+  // background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
 }
+
+// .sorry {
+//   font-size: 1.4rem;
+//   text-align: center;
+//   text-shadow: 0 0.5px 0.5px rgba(0, 0, 0);
+
+//   @media (min-width: 601px) and (orientation: portrait) {
+//     text-shadow: none;
+//     font-size: 1.4rem;
+//   }
+// }
 
 .label-container {
   display: flex;
   flex-direction: column;
-  margin: 2rem 0;
+  gap: 0.4rem;
+  // background-color: aquamarine;
 
   @media only screen and (max-width: 600px) and (orientation: portrait) {
     margin: 1.5rem 0;
@@ -307,7 +320,7 @@
 
 .input {
   padding: 0.6rem 0 0.6rem 0.6rem;
-  width: 98%;
+  width: calc(100% - 0.6rem);
   border: none;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 
