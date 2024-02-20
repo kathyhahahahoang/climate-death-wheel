@@ -12,6 +12,60 @@ import { wheelOptions } from "../constants/WheelOptions.tsx";
 import { useInfoContext } from "../store/info-context.tsx";
 import React, { useState, useEffect } from "react";
 
+type iconType = {
+  src: string;
+  id: number;
+  alt: string;
+};
+
+const iconArray: iconType[] = [
+  {
+    src: heatwave,
+    id: 23,
+    alt: "Burning mountains",
+  },
+  {
+    src: poverty,
+    id: 0,
+    alt: "Women surrounded by plastic garbage",
+  },
+  {
+    src: disease,
+    id: 30,
+    alt: "Microscopic close-up of disease",
+  },
+  {
+    src: drought,
+    id: 6,
+    alt: "Dried ground",
+  },
+  {
+    src: capitalism,
+    id: 3,
+    alt: "Man holding a sign against capitalism at a protest",
+  },
+  {
+    src: permafrost,
+    id: 17,
+    alt: "Aerial view of permafrost",
+  },
+  {
+    src: poorAirQuality,
+    id: 12,
+    alt: "Factories spewing out smoke",
+  },
+  {
+    src: risingSeaLevels,
+    id: 42,
+    alt: "People walking around their flooded town",
+  },
+  {
+    src: superstorm,
+    id: 36,
+    alt: "Aftermath of a hurricane",
+  },
+];
+
 const GridImages = () => {
   const {
     title,
@@ -35,7 +89,7 @@ const GridImages = () => {
     setDescription(longText);
   }, [image, title, longText]);
 
-  const changeHandler = (event) => {
+  const changeHandler = (event: MouseEvent) => {
     setShowLarge(!showLarge);
     setShowTiles(!showTiles);
     const id = event.target.id;
@@ -57,7 +111,7 @@ const GridImages = () => {
     <div className={styles.container}>
       {showLarge && (
         <div className={styles.close} onClick={largePicChangeHandler}>
-          x
+          <span>x</span>
         </div>
       )}
 
@@ -123,106 +177,22 @@ const GridImages = () => {
           </div>
         )}
 
-        {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={heatwave}
-              id="23"
-              alt="Burning mountains"
-            ></img>
-          </div>
-        )}
-
-        {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={poverty}
-              id="0"
-              alt="Women surrounded by plastic garbage"
-            ></img>
-          </div>
-        )}
-        {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={disease}
-              id="30"
-              alt="Microscopic close-up of disease"
-            ></img>
-          </div>
-        )}
-        {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={drought}
-              id="6"
-              alt="Dried ground"
-            ></img>
-          </div>
-        )}
-        {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={capitalism}
-              id="3"
-              alt="Man holding a sign against capitalism at a protest"
-            ></img>
-          </div>
-        )}
-        {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={permafrost}
-              id="17"
-              alt="Aerial view of permafrost"
-            ></img>
-          </div>
-        )}
-        {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={poorAirQuality}
-              id="12"
-              alt="Factories spewing out smoke"
-            ></img>
-          </div>
-        )}
-        {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={risingSeaLevels}
-              id="42"
-              alt="People walking around their flooded town"
-            ></img>
-          </div>
-        )}
-        {showTiles && (
-          <div className={styles["pic-container"]}>
-            <img
-              className={styles.pic}
-              onClick={changeHandler}
-              src={superstorm}
-              id="36"
-              alt="Aftermath of a hurricane"
-            ></img>
-          </div>
-        )}
+        {iconArray.map((el) => {
+          return (
+            showTiles && (
+              <div className={styles["pic-container"]}>
+                <img
+                  className={styles.pic}
+                  onClick={changeHandler}
+                  src={el.src}
+                  id={el.id}
+                  alt={el.alt}
+                  key={el.id}
+                ></img>
+              </div>
+            )
+          );
+        })}
       </div>
     </div>
   );

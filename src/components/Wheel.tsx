@@ -10,12 +10,9 @@ import { useInfoContext } from "../store/info-context.tsx";
 
 const Wheel = ({ resultRef }) => {
   const {
-    title,
     setTitle,
-    text,
     setText,
     setLongText,
-    image,
     setImage,
     setIcon,
     setOpenModal,
