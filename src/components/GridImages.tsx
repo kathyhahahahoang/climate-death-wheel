@@ -1,4 +1,4 @@
-import styles from "./GridImages1.module.scss";
+import styles from "./GridImages.module.scss";
 import poverty from "../img/poverty.webp";
 import capitalism from "../img/capitalism.webp";
 import disease from "../img/disease.webp";
