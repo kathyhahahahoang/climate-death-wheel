@@ -5,5 +5,20 @@
   margin: 8rem auto;
   text-align: center;
   text-transform: uppercase;
-  background-color: antiquewhite;
+
+  @media (max-width: 1800px) {
+    width: calc(100% - 10rem);
+  }
+
+  @media (max-width: 1400px) {
+    width: calc(100% - 4rem);
+    font-size: 5rem;
+    line-height: 4.2rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 4rem;
+    line-height: 3.2rem;
+    margin: 4rem auto;
+  }
 }
