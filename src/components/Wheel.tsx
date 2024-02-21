@@ -22,7 +22,7 @@ const Wheel = ({ resultRef }) => {
 
   const [spin, setSpin] = useState(false);
   const [buttonDisable, setButtonDisable] = useState(false);
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const [deg, setDeg] = useState(0);
   const [winner, setWinner] = useState({});
 

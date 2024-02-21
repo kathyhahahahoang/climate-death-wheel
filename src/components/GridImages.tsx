@@ -89,7 +89,7 @@ const GridImages = () => {
     setDescription(longText);
   }, [image, title, longText]);
 
-  const changeHandler = (event: MouseEvent) => {
+  const changeHandler = (event) => {
     setShowLarge(!showLarge);
     setShowTiles(!showTiles);
     const id = event.target.id;
