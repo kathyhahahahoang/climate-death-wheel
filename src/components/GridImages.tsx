@@ -1,16 +1,16 @@
 import styles from "./GridImages.module.scss";
-import poverty from "../img/poverty.webp";
-import capitalism from "../img/capitalism.webp";
-import disease from "../img/disease.webp";
-import drought from "../img/drought.webp";
-import heatwave from "../img/heatwave.webp";
-import permafrost from "../img/permafrost.webp";
-import poorAirQuality from "../img/poorAirQuality.webp";
-import risingSeaLevels from "../img/risingSeaLevels.webp";
-import superstorm from "../img/superstorm.webp";
+import poverty from "../assets/img/poverty.webp";
+import capitalism from "../assets/img/capitalism.webp";
+import disease from "../assets/img/disease.webp";
+import drought from "../assets/img/drought.webp";
+import heatwave from "../assets/img/heatwave.webp";
+import permafrost from "../assets/img/permafrost.webp";
+import poorAirQuality from "../assets/img/poorAirQuality.webp";
+import risingSeaLevels from "../assets/img/risingSeaLevels.webp";
+import superstorm from "../assets/img/superstorm.webp";
 import { wheelOptions } from "../constants/WheelOptions.tsx";
 import { useInfoContext } from "../store/info-context.tsx";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 type iconType = {
   src: string;
@@ -188,7 +188,7 @@ const GridImages = () => {
                   id={el.id}
                   alt={el.alt}
                   key={el.id}
-                ></img>
+                />
               </div>
             )
           );

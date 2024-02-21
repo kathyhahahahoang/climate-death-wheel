@@ -1,11 +1,11 @@
 import styles from "./Wheel.module.scss";
 import Modal from "./Modal.tsx";
-import questionLandsape from "../img/question-landscape.PNG";
-import questionPortrait from "../img/question-portrait.PNG";
-import wheel from "../img/wheel.webp";
-import wheelMobile from "../img/wheel-mobile.webp";
+import questionLandsape from "../assets/img/question-landscape.png";
+import questionPortrait from "../assets/img/question-portrait.png";
+import wheel from "../assets/img/wheel.webp";
+import wheelMobile from "../assets/img/wheel-mobile.webp";
 import { wheelOptions } from "../constants/WheelOptions.tsx";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useInfoContext } from "../store/info-context.tsx";
 
 const Wheel = ({ resultRef }) => {

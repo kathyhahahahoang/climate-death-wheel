@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useInfoContext } from "../store/info-context.tsx";
-import Icons from "../constants/Icons";
+import Icons from "../constants/Icons.tsx";
 import styles from "./MapView.module.scss";
 
 type DeathObject = {

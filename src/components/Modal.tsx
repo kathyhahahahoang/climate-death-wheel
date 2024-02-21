@@ -1,7 +1,6 @@
 import styles from "./Modal.module.scss";
-import modal from "../img/modal.webp";
+import modal from "../assets/img/modal.webp";
 import { useInfoContext } from "../store/info-context.tsx";
-import React from "react";
 
 type ModalProps = {
   onModalHandler: () => void;

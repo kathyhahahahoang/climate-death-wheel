@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Video.module.scss";
-import video from "../img/video.mp4";
-import kathy from "../img/kathy.webp";
+import video from "../assets/img/video.mp4";
+import kathy from "../assets/img/kathy.webp";
 import { useInfoContext } from "../store/info-context.tsx";
 
 import PlacesAutocomplete, {
@@ -14,16 +14,16 @@ const Video = () => {
 
   const [enteredName, setEnteredName] = useState<string>("");
   const [address, setAddress] = useState<string>("");
-  const [latitude, setLatitude] = useState<{ lat: number }>();
-  const [longitude, setLongitude] = useState<{ lng: number }>();
+  const [latitude, setLatitude] = useState<number>();
+  const [longitude, setLongitude] = useState<number>();
   const [submitMessage, setSubmitMessage] = useState<boolean>(false);
 
   const handleSelect = async (value) => {
     const results = await geocodeByAddress(value);
-    const coords = await getLatLng(results[0]);
+    const { lat, lng } = await getLatLng(results[0]);
     setAddress(value);
-    setLatitude(coords.lat);
-    setLongitude(coords.lng);
+    setLatitude(lat);
+    setLongitude(lng);
   };
 
   const nameChangeHandler = (e) => {

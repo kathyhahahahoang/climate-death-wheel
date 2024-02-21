@@ -1,13 +1,13 @@
-import povertyImg from "../img/poverty.webp";
-import capitalismImg from "../img/capitalism.webp";
-import diseaseImg from "../img/disease.webp";
-import droughtImg from "../img/drought.webp";
-import heatwaveImg from "../img/heatwave.webp";
-import permafrostImg from "../img/permafrost.webp";
-import poorAirQualityImg from "../img/poorAirQuality.webp";
-import risingSeaLevelsImg from "../img/risingSeaLevels.webp";
-import superstormImg from "../img/superstorm.webp";
-import winnerImg from "../img/winner.webp";
+import povertyImg from "../assets/img/poverty.webp";
+import capitalismImg from "../assets/img/capitalism.webp";
+import diseaseImg from "../assets/img/disease.webp";
+import droughtImg from "../assets/img/drought.webp";
+import heatwaveImg from "../assets/img/heatwave.webp";
+import permafrostImg from "../assets/img/permafrost.webp";
+import poorAirQualityImg from "../assets/img/poorAirQuality.webp";
+import risingSeaLevelsImg from "../assets/img/risingSeaLevels.webp";
+import superstormImg from "../assets/img/superstorm.webp";
+import winnerImg from "../assets/img/winner.webp";
 
 export type InfoObject = {
   title: string;
