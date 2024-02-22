@@ -177,7 +177,7 @@ const GridImages = () => {
           </div>
         )}
 
-        {iconArray.map((el) => {
+        {iconArray.map((el: iconType) => {
           return (
             showTiles && (
               <div className={styles["pic-container"]}>
@@ -185,7 +185,7 @@ const GridImages = () => {
                   className={styles.pic}
                   onClick={changeHandler}
                   src={el.src}
-                  id={el.id}
+                  id={el.id.toString()}
                   alt={el.alt}
                   key={el.id}
                 />
