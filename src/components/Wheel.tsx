@@ -7,6 +7,7 @@ import wheelMobile from "../assets/img/wheel-mobile.webp";
 import { wheelOptions } from "../constants/WheelOptions.tsx";
 import { useState, useEffect } from "react";
 import { useInfoContext } from "../store/info-context.tsx";
+import { InfoObject } from "../constants/WheelInfo.tsx";
 
 const Wheel = ({ resultRef }) => {
   const {
@@ -20,11 +21,11 @@ const Wheel = ({ resultRef }) => {
     setShowLarge,
   } = useInfoContext();
 
-  const [spin, setSpin] = useState(false);
-  const [buttonDisable, setButtonDisable] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [deg, setDeg] = useState(0);
-  const [winner, setWinner] = useState({});
+  const [spin, setSpin] = useState<boolean>(false);
+  const [buttonDisable, setButtonDisable] = useState<boolean>(false);
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [deg, setDeg] = useState<number>(0);
+  const [winner, setWinner] = useState<InfoObject>();
 
   useEffect(() => {
     setDeg(Math.floor(5000 + Math.random() * 10000));
@@ -74,7 +75,7 @@ const Wheel = ({ resultRef }) => {
     setShowModal(false);
   };
 
-  const readMoreHandler = (e) => {
+  const readMoreHandler = (e: MouseEvent) => {
     e.preventDefault();
     setShowModal(false);
     resultRef.current.scrollIntoView({ behavior: "smooth" });

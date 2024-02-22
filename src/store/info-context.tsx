@@ -10,7 +10,7 @@ import {
 type InfoState = {
   title: string;
   text: string;
-  longText: string;
+  longText?: string | undefined;
   image: string;
   icon: string;
   openModal: boolean;
@@ -22,7 +22,7 @@ type InfoState = {
 type InfoContextValue = InfoState & {
   setTitle: Dispatch<SetStateAction<string>>;
   setText: Dispatch<SetStateAction<string>>;
-  setLongText: Dispatch<SetStateAction<string>>;
+  setLongText: Dispatch<SetStateAction<string | undefined>>;
   setImage: Dispatch<SetStateAction<string>>;
   setIcon: Dispatch<SetStateAction<string>>;
   setOpenModal: Dispatch<SetStateAction<boolean>>;
@@ -50,15 +50,15 @@ type InfoContextProviderProps = {
 export default function InfoContextProvider({
   children,
 }: InfoContextProviderProps) {
-  const [title, setTitle] = useState("");
-  const [text, setText] = useState("");
-  const [longText, setLongText] = useState("");
-  const [image, setImage] = useState("");
-  const [icon, setIcon] = useState("");
-  const [openModal, setOpenModal] = useState(false);
-  const [showTiles, setShowTiles] = useState(true);
-  const [showLarge, setShowLarge] = useState(false);
-  const [submitForm, setSubmitForm] = useState(false);
+  const [title, setTitle] = useState<string>("");
+  const [text, setText] = useState<string>("");
+  const [longText, setLongText] = useState<string | undefined>("");
+  const [image, setImage] = useState<string>("");
+  const [icon, setIcon] = useState<string>("");
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [showTiles, setShowTiles] = useState<boolean>(true);
+  const [showLarge, setShowLarge] = useState<boolean>(false);
+  const [submitForm, setSubmitForm] = useState<boolean>(false);
 
   const ctx: InfoContextValue = {
     title,

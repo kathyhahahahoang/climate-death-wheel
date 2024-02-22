@@ -4,7 +4,7 @@ import { useInfoContext } from "../store/info-context.tsx";
 
 type ModalProps = {
   onModalHandler: () => void;
-  onReadMore: () => void;
+  onReadMore: (e: MouseEvent) => void;
 };
 
 const Modal = ({ onModalHandler, onReadMore }: ModalProps) => {

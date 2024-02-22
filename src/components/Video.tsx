@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import styles from "./Video.module.scss";
 import video from "../assets/img/video.mp4";
 import kathy from "../assets/img/kathy.webp";
@@ -13,26 +13,26 @@ const Video = () => {
   const { title, setSubmitForm, icon } = useInfoContext();
 
   const [enteredName, setEnteredName] = useState<string>("");
-  const [address, setAddress] = useState<string>("");
+  const [enteredAddress, setEnteredAddress] = useState<string>("");
   const [latitude, setLatitude] = useState<number>();
   const [longitude, setLongitude] = useState<number>();
   const [submitMessage, setSubmitMessage] = useState<boolean>(false);
-
-  const handleSelect = async (value) => {
-    const results = await geocodeByAddress(value);
-    const { lat, lng } = await getLatLng(results[0]);
-    setAddress(value);
-    setLatitude(lat);
-    setLongitude(lng);
-  };
 
   const nameChangeHandler = (e) => {
     setEnteredName(e.target.value);
   };
 
-  const submitHandler = (e) => {
+  const coordsHandler = async (value: string) => {
+    const results = await geocodeByAddress(value);
+    const { lat, lng } = await getLatLng(results[0]);
+    setEnteredAddress(value);
+    setLatitude(lat);
+    setLongitude(lng);
+  };
+
+  const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setAddress("");
+    setEnteredAddress("");
     setEnteredName("");
     setSubmitMessage(true);
     fetch("https://climate-18479-default-rtdb.firebaseio.com/deaths.json", {
@@ -85,9 +85,9 @@ const Video = () => {
               General Location*
             </label>
             <PlacesAutocomplete
-              value={address}
-              onChange={setAddress}
-              onSelect={handleSelect}
+              value={enteredAddress}
+              onChange={setEnteredAddress}
+              onSelect={coordsHandler}
             >
               {({
                 getInputProps,
@@ -99,7 +99,7 @@ const Video = () => {
                   <input
                     className={styles.input}
                     id="location"
-                    value={address}
+                    value={enteredAddress}
                     required
                     {...getInputProps({})}
                   />

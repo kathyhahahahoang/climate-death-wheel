@@ -12,7 +12,7 @@ import {
   InfoObject,
 } from "./WheelInfo.tsx";
 
-type WheelArray = InfoObject & {
+export type WheelArray = InfoObject & {
   index: number;
 };
 
