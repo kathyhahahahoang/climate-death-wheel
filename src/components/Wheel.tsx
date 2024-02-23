@@ -5,11 +5,15 @@ import questionPortrait from "../assets/img/question-portrait.png";
 import wheel from "../assets/img/wheel.webp";
 import wheelMobile from "../assets/img/wheel-mobile.webp";
 import { wheelOptions } from "../constants/WheelOptions.tsx";
-import { useState, useEffect } from "react";
+import { useState, useEffect, ReactNode, ComponentType } from "react";
 import { useInfoContext } from "../store/info-context.tsx";
 import { InfoObject } from "../constants/WheelInfo.tsx";
 
-const Wheel = ({ resultRef }) => {
+type WheelProps = {
+  resultRef: ComponentType;
+};
+
+const Wheel = ({ resultRef }: WheelProps) => {
   const {
     setTitle,
     setText,

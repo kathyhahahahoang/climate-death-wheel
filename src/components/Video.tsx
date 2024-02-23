@@ -18,8 +18,8 @@ const Video = () => {
   const [longitude, setLongitude] = useState<number>();
   const [submitMessage, setSubmitMessage] = useState<boolean>(false);
 
-  const nameChangeHandler = (e) => {
-    setEnteredName(e.target.value);
+  const nameChangeHandler = (e: FormEvent<HTMLInputElement>) => {
+    setEnteredName(e.currentTarget.value);
   };
 
   const coordsHandler = async (value: string) => {
@@ -95,11 +95,10 @@ const Video = () => {
                 getSuggestionItemProps,
                 loading,
               }) => (
-                <div key={suggestions.description}>
+                <div>
                   <input
                     className={styles.input}
                     id="location"
-                    value={enteredAddress}
                     required
                     {...getInputProps({})}
                   />
