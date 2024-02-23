@@ -79,8 +79,7 @@ const Wheel = ({ resultRef }: WheelProps) => {
     setShowModal(false);
   };
 
-  const readMoreHandler = (e: MouseEvent) => {
-    e.preventDefault();
+  const readMoreHandler = () => {
     setShowModal(false);
     resultRef.current.scrollIntoView({ behavior: "smooth" });
   };
