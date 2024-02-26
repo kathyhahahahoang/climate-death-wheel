@@ -87,7 +87,6 @@ const Wheel = ({ onScroll }: WheelProps) => {
   const spinWheel = {
     transform: spin ? `rotate(${deg}deg)` : "",
     transition: spin ? "all 5s ease-out" : "",
-    pointerEvents: buttonDisable ? "none" : "auto",
   };
 
   return (
@@ -126,7 +125,10 @@ const Wheel = ({ onScroll }: WheelProps) => {
             src={wheel}
             alt="roulette wheel"
             onClick={spinHandler}
-            style={spinWheel}
+            style={{
+              pointerEvents: buttonDisable ? "none" : "auto",
+              ...spinWheel,
+            }}
           />
         </picture>
         <div className={styles.text}>
