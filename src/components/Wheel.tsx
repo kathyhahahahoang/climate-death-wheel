@@ -82,7 +82,6 @@ const Wheel = ({ onScroll }: WheelProps) => {
   const readMoreHandler = () => {
     setShowModal(false);
     onScroll();
-    // ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const spinWheel = {

@@ -9,18 +9,17 @@ import InfoContextProvider from "./store/info-context.tsx";
 import { useRef } from "react";
 
 function App() {
-  // const ref = useRef<HTMLDivElement | null>(null);
-  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const resultRef = useRef<HTMLDivElement | null>(null);
 
   const scrollHandler = () => {
-    scrollRef.current!.scrollIntoView({ behavior: "smooth" });
+    resultRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <InfoContextProvider>
       <div className={`${styles.background} ${styles.app}`}>
-        <Wheel ref={scrollRef} onScroll={scrollHandler} />
-        <Quote ref={scrollRef} />
+        <Wheel onScroll={scrollHandler} />
+        <Quote ref={resultRef} />
         <GridImages />
         <Video />
         <MapView />
