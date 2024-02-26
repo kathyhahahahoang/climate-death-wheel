@@ -166,13 +166,13 @@ const GridImages = () => {
                 onClick={largePicChangeHandler}
                 src={image}
                 alt="Effects of climate change"
-              ></img>
+              />
             ) : (
               <img
                 onClick={largePicChangeHandler}
                 src={imageId}
                 alt="Effects of climate change"
-              ></img>
+              />
             )}
           </div>
         )}
@@ -180,14 +180,13 @@ const GridImages = () => {
         {iconArray.map((el: iconType) => {
           return (
             showTiles && (
-              <div className={styles["pic-container"]}>
+              <div className={styles["pic-container"]} key={el.id}>
                 <img
                   className={styles.pic}
                   onClick={changeHandler}
                   src={el.src}
                   id={el.id.toString()}
                   alt={el.alt}
-                  key={el.id}
                 />
               </div>
             )

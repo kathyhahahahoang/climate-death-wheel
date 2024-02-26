@@ -5,15 +5,15 @@ import questionPortrait from "../assets/img/question-portrait.png";
 import wheel from "../assets/img/wheel.webp";
 import wheelMobile from "../assets/img/wheel-mobile.webp";
 import { wheelOptions } from "../constants/WheelOptions.tsx";
-import { useState, useEffect, ReactNode, ComponentType } from "react";
+import { useState, useEffect } from "react";
 import { useInfoContext } from "../store/info-context.tsx";
 import { InfoObject } from "../constants/WheelInfo.tsx";
 
 type WheelProps = {
-  resultRef: ComponentType;
+  onScroll: () => void;
 };
 
-const Wheel = ({ resultRef }: WheelProps) => {
+const Wheel = ({ onScroll }: WheelProps) => {
   const {
     setTitle,
     setText,
@@ -81,7 +81,8 @@ const Wheel = ({ resultRef }: WheelProps) => {
 
   const readMoreHandler = () => {
     setShowModal(false);
-    resultRef.current.scrollIntoView({ behavior: "smooth" });
+    onScroll();
+    // ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const spinWheel = {
