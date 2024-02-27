@@ -10,7 +10,7 @@ import risingSeaLevels from "../assets/img/risingSeaLevels.webp";
 import superstorm from "../assets/img/superstorm.webp";
 import { wheelOptions } from "../constants/WheelOptions.tsx";
 import { useInfoContext } from "../store/info-context.tsx";
-import { useState, useEffect } from "react";
+import { useState, useEffect, MouseEvent } from "react";
 
 type iconType = {
   src: string;
@@ -89,10 +89,10 @@ const GridImages = () => {
     setDescription(longText);
   }, [image, title, longText]);
 
-  const changeHandler = (event) => {
+  const changeHandler = (event: MouseEvent<HTMLImageElement>) => {
     setShowLarge(!showLarge);
     setShowTiles(!showTiles);
-    const id = event.target.id;
+    const id = +event.currentTarget.id;
     const image = wheelOptions[id].image;
     const header = wheelOptions[id].title;
     const text = wheelOptions[id].longText;
