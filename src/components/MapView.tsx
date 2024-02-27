@@ -56,8 +56,9 @@ const MapView = () => {
 
         {deaths.map((death) => {
           const iconProps = Object.hasOwn(Icons, death.icon) && {
-            icon: Icons[death.icon],
+            icon: Icons[death.icon as keyof typeof Icons],
           };
+
           return (
             <Marker
               position={[death.lat, death.long]}

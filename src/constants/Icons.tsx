@@ -1,6 +1,19 @@
-import L from "leaflet";
+import L, { type DivIcon } from "leaflet";
 
-const Icons = {
+type IconObject = {
+  disease: DivIcon;
+  capitalism: DivIcon;
+  heatwave: DivIcon;
+  superstorm: DivIcon;
+  poverty: DivIcon;
+  drought: DivIcon;
+  risingSeaLevels: DivIcon;
+  thawingPermafrost: DivIcon;
+  poorAirQuality: DivIcon;
+  winner: DivIcon;
+};
+
+const Icons: IconObject = {
   disease: L.divIcon({
     html: `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -9,7 +22,6 @@ const Icons = {
     className: "disease",
     iconSize: [24, 40],
     iconAnchor: [12, 40],
-    name: "disease",
   }),
   capitalism: L.divIcon({
     html: `
@@ -17,7 +29,6 @@ const Icons = {
     className: "",
     iconSize: [24, 40],
     iconAnchor: [12, 40],
-    name: "capitalism",
   }),
   heatwave: L.divIcon({
     html: `
@@ -27,7 +38,6 @@ const Icons = {
     className: "",
     iconSize: [24, 40],
     iconAnchor: [12, 40],
-    name: "heatwave",
   }),
   superstorm: L.divIcon({
     html: `
@@ -36,7 +46,6 @@ const Icons = {
     className: "",
     iconSize: [24, 40],
     iconAnchor: [12, 40],
-    name: "superstorm",
   }),
   poverty: L.divIcon({
     html: `
@@ -44,7 +53,6 @@ const Icons = {
     className: "",
     iconSize: [24, 40],
     iconAnchor: [12, 40],
-    name: "poverty",
   }),
   drought: L.divIcon({
     html: `
@@ -52,7 +60,6 @@ const Icons = {
     className: "",
     iconSize: [24, 40],
     iconAnchor: [12, 40],
-    name: "drought",
   }),
 
   risingSeaLevels: L.divIcon({
@@ -61,7 +68,6 @@ const Icons = {
     className: "",
     iconSize: [24, 40],
     iconAnchor: [12, 40],
-    name: "risingSeaLevels",
   }),
   thawingPermafrost: L.divIcon({
     html: `
@@ -69,7 +75,6 @@ const Icons = {
     className: "",
     iconSize: [24, 40],
     iconAnchor: [12, 40],
-    name: "thawingPermafrost",
   }),
   poorAirQuality: L.divIcon({
     html: `
@@ -77,7 +82,6 @@ const Icons = {
     className: "",
     iconSize: [24, 40],
     iconAnchor: [12, 40],
-    name: "poorAirQuality",
   }),
   winner: L.divIcon({
     html: `
@@ -85,7 +89,6 @@ const Icons = {
     className: "",
     iconSize: [24, 40],
     iconAnchor: [12, 40],
-    name: "winner",
   }),
 };
 export default Icons;
