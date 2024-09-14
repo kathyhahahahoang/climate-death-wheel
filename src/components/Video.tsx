@@ -129,6 +129,7 @@ const Video = () => {
                             className,
                             style,
                           })}
+                          key={suggestion.description}
                         >
                           <span>{suggestion.description}</span>
                         </div>
